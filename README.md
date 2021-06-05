@@ -23,10 +23,10 @@
 
 ## :page_facing_up:設計書
 テーブル定義書  
-<...>
+https://docs.google.com/spreadsheets/d/1VM6QD9EQiTuTyAFOofIaC3fqfjNhObXaFDNfPOC31io/edit?usp=sharing
 
 詳細設計書  
-<...>
+https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing
 
 ## :memo:機能一覧
 https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing
