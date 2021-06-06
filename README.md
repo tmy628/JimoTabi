@@ -1,7 +1,7 @@
 # :handbag:じもたび:handbag:
 ## :black_nib:サイト概要
-絶景スポットや知られざる穴場スポット、おすすめのご当地料理や名産品、伝統文化や工芸品など
-身近にあるけれどまだ知られていない地元地域に関するあらゆる情報を、受信・発信することができるサービス
+絶景スポットや知られざる穴場スポット、おすすめのご当地料理や名産品、伝統文化や工芸品など  
+身近にあるけれどまだ知られていない地元地域に関するあらゆる情報を共有できるサービス  
 
 ### :mega:サイトテーマ
 地元の魅力を受信・発信し、地元の魅力を再発見するためのWebアプリケーション
@@ -19,17 +19,16 @@
 * まだ知られていない地元の魅力を発見したい人、発見してもらいたい人  
 
 ### :exclamation:主な利用シーン
-地元地域に関するあらゆる情報を受信・発信したいときにご活用いただくことを想定しています。
+* 地元の魅力をPRしたい時  
+* 地元の魅力をもっと知りたい時  
 
 ## :page_facing_up:設計書
-テーブル定義書  
-https://docs.google.com/spreadsheets/d/1VM6QD9EQiTuTyAFOofIaC3fqfjNhObXaFDNfPOC31io/edit?usp=sharing
+[テーブル定義書](https://docs.google.com/spreadsheets/d/1VM6QD9EQiTuTyAFOofIaC3fqfjNhObXaFDNfPOC31io/edit?usp=sharing)  
 
-詳細設計書  
-https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing
+[詳細設計書](https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing)  
 
 ## :memo:機能一覧
-https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing
+[機能一覧](https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing)
 
 ## :memo:開発環境
 - OS：Linux(CentOS)
@@ -37,4 +36,3 @@ https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQY
 - フレームワーク：Ruby on Rails
 - ライブラリ：jQuery,bootstrap,FontAwesome6
 - IDE：Cloud9
-
