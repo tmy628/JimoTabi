@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'searches/index'
+  get 'posts/new'
+  get 'posts/index'
+  get 'posts/show'
+  get 'posts/edit'
+  get 'posts/search'
+  get 'users/show'
+  get 'users/edit'
   devise_for :users
 
   # ゲストログイン用
