@@ -1,2 +1,19 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="post-body">
+  <p><%= @post.title %></p>
+
+
+  <p>
+    <%= image_tag('no_image_user.jpg') %>
+    <%= @post.user.name %>
+    &nbsp|&nbsp更新日：
+    <%= @post.created_at.strftime('%Y年%-m月%-d日')%>
+  </p>
+  <%= attachment_image_tag @post, :image %>
+  <p><%= @post.caption %></p>
+
+  <!-- post.tag.tag_name -->
+  <!-- 投稿に関連づけられたタグを表示 -->
+  
+  <!-- post.spot.address -->
+  <!-- 投稿に関連づけられた所在地を表示 -->
+</div>
