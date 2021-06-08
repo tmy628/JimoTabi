@@ -11,8 +11,8 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.order(created_at: :desc)
-    # 新しい投稿が上にくるように設定
+    @posts = Post.page(params[:page]).reverse_order
+    # 1ページ分の決められた数のデータだけを、新しい順に取得するように変更
   end
 
   def show
