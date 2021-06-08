@@ -7,10 +7,12 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     @post.save
-    redirect_to post_path(@post)
+    redirect_to posts_path(@post)
   end
 
   def index
+    @posts = Post.all.order(created_at: :desc)
+    # 新しい投稿が上にくるように設定
   end
 
   def show
