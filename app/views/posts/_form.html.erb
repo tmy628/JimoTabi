@@ -1,0 +1,48 @@
+<table>
+  <tr>
+    <td><%= f.label :画像 %></td>
+    <td><%= f.attachment_field :image %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :タイトル %></td>
+    <td><%= f.text_field :title %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :説明文 %></td>
+    <td><%= f.text_area :caption %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+<% if local_assigns[:edit_flag].present? %>
+<!-- partialの指定したローカル変数に値が入っているか否かを判別し切り分ける -->
+</table>
+  <%= f.submit '編集を完了する' %>
+
+<% else %>
+</table>
+  <%= f.submit '投稿する' %>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
