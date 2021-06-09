@@ -1,7 +1,7 @@
 <div class="post-body">
   <p><%= @post.title %></p>
   <p>
-    <%= image_tag('no_image_user.jpg') %>
+    <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no_image_user.jpg" %>
     <%= @post.user.name %>
     &nbsp|&nbsp更新日：
     <%= @post.created_at.strftime('%Y年%-m月%-d日')%>
