@@ -1,5 +1,4 @@
 <h1>投稿編集</h1>
 <%= form_with model: @post, local:true do |f| %>
   <%= render :partial => 'form', :locals => {:f => f, :edit_flag => true} %>
-  
 <% end %>
