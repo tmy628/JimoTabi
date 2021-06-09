@@ -8,14 +8,16 @@
   <% end %>
 </div>
 
+<h2><%= link_to '投稿一覧', user_path %></h2>
+<h2><%= link_to "お気に入り投稿一覧", like_user_path(@user) %></h2>
 <% @posts.each do |post| %>
 <div>
-  <%= link_to post_path(post.id) do %>
-    <%= attachment_image_tag post, :image %>
-  <% end %>
-  <%= link_to post_path(post.id) do %>
-    <p><%= post.title %></p>
-  <% end %>
+  <p><%= link_to post_path(post.id) do %>
+    <%= attachment_image_tag post, :image, :fill, 200, 150, format: 'jpeg', fallback: "no_image.jpg" %>
+    <%= post.title %>
+    <% end %>
+  </p>
+
   <p><%= post.caption %></p>
 
   <!-- post.spot.address -->
@@ -27,7 +29,9 @@
   <p>
     <%= post.created_at.strftime('%Y年%-m月%-d日')%>
     &nbsp|&nbsp
+    <%= link_to user_path(post.user) do %>
     <%= post.user.name %>
+    <% end %>
   </p>
 </div>
 <% end %>
