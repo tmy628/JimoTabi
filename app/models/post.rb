@@ -8,4 +8,8 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   attachment :image
+
+  def liked_by(user)
+    Like.find_by(user_id: user.id, post_id: id)
+  end
 end
