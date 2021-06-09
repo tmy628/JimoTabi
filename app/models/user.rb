@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
+  
+  attachment :profile_image
 
   #ゲストユーザー用のアカウント作成
   def self.guest
