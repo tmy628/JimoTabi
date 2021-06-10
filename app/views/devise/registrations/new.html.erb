@@ -1,44 +1,41 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 mt-5">
-      <h2 class = "offset-sm-1 mb-2 font-weight-bold"><%= t('.sign_up') %></h2>
-      <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
+<div class="card col-sm-6 mx-auto mt-5">
+  <div class="card-body">
+    <h2 class="mt-1 mb-3 font-weight-bold"><%= t('.sign_up') %></h2>
+    <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="field text-center">
-        <%= f.label :name, class: "col-4" %>
-        <%= f.text_field :name, autofocus: true, class: "email col-4" %>
-      </div>
+    <div class="form-group">
+      <%= f.label :name, class: "form-label" %><br>
+      <%= f.text_field :name, autofocus: true, class: "form-control" %>
+    </div>
 
-      <div class="field text-center mt-2">
-        <%= f.label :email, class: "col-4" %>
-        <%= f.email_field :email, autofocus: true,  placeholder: "example@example.com", class: "email col-4" %>
-      </div>
+    <div class="form-group">
+      <%= f.label :email, class: "form-label" %><br>
+      <%= f.email_field :email, autofocus: true,  placeholder: "example@example.com", class: "form-control" %>
+    </div>
 
-      <div class="field text-center mt-2">
-        <%= f.label :password, class: "col-4" %>
-        <% if @minimum_password_length %>
-         <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
-        <% end %>
-        <%= f.password_field :password, autocomplete: "new-password", class: "email col-4" %>
-      </div>
+    <div class="form-group">
+      <%= f.label :password, class: "form-label" %>
+      <% if @minimum_password_length %>
+      <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
+      <% end %><br>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+    </div>
 
-      <div class="field text-center my-2">
-        <%= f.label :password_confirmation, class: "col-4" %>
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "email col-4" %>
-      </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation, class: "form-label" %><br>
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+    </div>
 
-      <div class="actions text-center my-3">
-        <%= f.submit t('.sign_up'), class: "btn btn-success col-5" %>
-      </div>
-      <% end %>
+    <div class="actions">
+      <%= f.submit t('.sign_up'), class: "btn btn-success btn-block" %>
+    </div>
+    <% end %>
 
-      <div class = "offset-sm-1 mt-5">
-        <h3 class = "font-weight-bold">既に登録済みの方</h3>
-        <div class = "ml-5 m-3">
-          <%= link_to "こちら", new_session_path(resource_name), class: "underline" %> からログインしてください。
-        </div>
-      </div>
+    <hr class="border-dark">
+
+    <div>
+      <%= link_to "アカウントをお持ちの方", new_session_path(resource_name), class: 'btn btn-info btn-block' %>
     </div>
   </div>
 </div>
