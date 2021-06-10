@@ -1,0 +1,50 @@
+<header class="border-bottom">
+  <nav class="navbar navbar-expand-lg navbar-light p-4">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/"><span class="font-weight-bold">じもたび</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <% if user_signed_in? %>
+          <ul class="navbar-nav mr-auto">
+            <form class="form-inline">
+              <input class="form-control form-control-sm " type="search" placeholder="検索ワードを入力" aria-label="Search">
+              <button class="btn btn-outline-secondary fas fa-search" type="submit"></button>
+            </form>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <%= link_to ' 投稿する', new_post_path, class: 'fas fa-pen-fancy nav-link active' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to ' 投稿一覧', posts_path, class: 'fas fa-list-ul nav-link active' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to ' マイページ', user_path(current_user.id) , class: 'fas fa-user nav-link active' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to " ログアウト", destroy_user_session_path, method: :delete, class: 'fas fa-sign-out-alt nav-link active' %>
+            </li>
+          </ul>
+
+        <% else %>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <%= link_to '「じもたび」とは？',home_about_path, class: 'fas fa-link nav-link active' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to ' 新規登録', new_user_registration_path, class: 'fas fa-user-plus nav-link active' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to ' ログイン', new_user_session_path, class: 'fas fa-sign-in-alt nav-link active' %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</header>
