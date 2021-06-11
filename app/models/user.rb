@@ -5,7 +5,8 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  attachment :profile_image
+  attachment :profile_image, destroy: false
+  # destroyオプションを渡してアップロードしたファイルを保持する
 
   validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true
   validates :introduction, length: { maximum: 50 }
