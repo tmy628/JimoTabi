@@ -9,8 +9,8 @@ class Post < ApplicationRecord
 
   attachment :image
 
+  validates :image, presence: true, presence: { message: 'を選択してください' }
   validates :title, presence: true
-  validates :image, presence: true
   validates :caption, presence: true, length: { maximum: 200 }
 
   def liked_by(user)
