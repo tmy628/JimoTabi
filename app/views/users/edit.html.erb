@@ -1,5 +1,6 @@
 <h2>プロフィール編集</h2>
-<%= form_with model:@user, local:true do |f| %>
+<%= form_with model: @user, local:true do |f| %>
+  <%= render 'layouts/errors', obj: @user %>
   <%= f.label :ユーザー名 %>
   <%= f.text_field :name, placeholder:"ユーザー名"%>
   <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"%>
