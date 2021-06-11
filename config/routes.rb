@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'homes#top'
-  get 'home/about', to: 'homes#about'
 
   # お気に入り情報を保存・削除するアクションへのルーティング
   resources :posts do
