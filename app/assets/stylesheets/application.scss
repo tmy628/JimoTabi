@@ -34,4 +34,7 @@
  .post-image{
    overflow: hidden; // 要素のボックスからはみ出した部分を隠す
    cursor: pointer; // マウスカーソルを手の形にする
+   display: flex;
+   align-items: center;
+   justify-content: center;
  }
