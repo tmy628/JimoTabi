@@ -30,3 +30,8 @@
  body {
    font-family: 'Sawarabi Mincho', sans-serif;
  }
+
+ .post-image{
+   overflow: hidden; // 要素のボックスからはみ出した部分を隠す
+   cursor: pointer; // マウスカーソルを手の形にする
+ }
