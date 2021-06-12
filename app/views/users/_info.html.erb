@@ -1,14 +1,11 @@
 <table class="table">
-  <h3 class="font-weight-bold">ユーザー情報</h3>
   <tr>
     <%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image_user.jpg" %>
   </tr>
   <tr>
-    <th>ユーザー名</th>
     <th><%= user.name %></th>
   </tr>
   <tr>
-    <th>自己紹介</th>
     <th><%= user.introduction %></th>
   </tr>
 </table>
