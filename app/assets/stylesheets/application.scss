@@ -24,6 +24,40 @@
  }
 
  .heading {
-  font-family: "Hannari";
-  font-size: 32px; /* フォントサイズを、32pxに設定 */
+   font-size: 32px;
+ }
+
+ body {
+   font-family: 'Sawarabi Mincho', sans-serif;
+ }
+
+ .post-image{
+   overflow: hidden; // 要素のボックスからはみ出した部分を隠す
+   cursor: pointer; // マウスカーソルを手の形にする
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+
+
+.link {
+
+color:#C0C0C0;
+text-decoration: none;
+
+}
+
+.link:hover {
+
+color:#000;
+text-decoration:none;
+
+}
+
+.link:active {
+
+color:#999;
+text-decoration:none;
+
 }
