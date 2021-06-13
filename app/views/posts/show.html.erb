@@ -3,7 +3,7 @@
     <h1 class="card-title"><%= @post.title %></h1>
     <div class="user-info">
       <p class="vertical-middle">
-        <%= attachment_image_tag @post.user, :profile_image, :fill, 30, 30, format: 'jpeg', fallback: "no_image_user.jpg", size:'30x30' , class: "rounded-circle" %>
+        <%= attachment_image_tag @post.user, :profile_image, :fill, 30, 30, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle" %>
       </p>
       <p class="vertical-middle">
         <%= link_to post_path(@post.id), class: "link" do %>
