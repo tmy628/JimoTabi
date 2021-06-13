@@ -31,33 +31,82 @@
    font-family: 'Sawarabi Mincho', sans-serif;
  }
 
- .post-image{
-   overflow: hidden; // 要素のボックスからはみ出した部分を隠す
-   cursor: pointer; // マウスカーソルを手の形にする
-   display: flex;
-   align-items: center;
-   justify-content: center;
+ .link {
+   color:#C0C0C0;
  }
 
+ .link:hover {
+   color:#000;
+ }
 
+ .link:active {
+   color:#999;
+ }
 
-.link {
+ .title-link {
+   color:#000;
+ }
 
-color:#C0C0C0;
-text-decoration: none;
+ .title-link:hover {
+   color:#000;
+ }
 
-}
+ .vertical-middle{
+   display: inline-block; /* インライン要素にすることで横に回り込む */
+   vertical-align: middle; /* 上下中央に寄せる */
+ }
 
-.link:hover {
+ .user-info {
+   color:#C0C0C0;
+ }
 
-color:#000;
-text-decoration:none;
+ .like-btn {
+    width: 25px;
+    height: 30px;
+    font-size: 25px;
+    color: #808080;
+    margin-left: 20px;
+ }
 
-}
+ .unlike-btn {
+    width: 25px;
+    height: 30px;
+    font-size: 25px;
+    color: #ffcc33;
+    margin-left: 20px;
+ }
 
-.link:active {
+ .fa-link {
+   text-decoration: none;
+ }
 
-color:#999;
-text-decoration:none;
+ .fa-link:hover {
+   text-decoration:none;
+ }
 
-}
+ .fa-link:active {
+   text-decoration:none;
+ }
+
+ .show-link {
+   color:#000;
+ }
+
+ .show-link:hover {
+   color:#000;
+ }
+
+ .img {
+   opacity: 1;
+   -webkit-transition: .3s ease-in-out;
+   transition: .3s ease-in-out;
+ }
+
+  .img:hover {
+   opacity: .5;
+ }
+
+ .font_space {
+  letter-spacing: 0.3em;
+  font-weight: bold;
+ }

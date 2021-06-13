@@ -1,31 +1,25 @@
-<table>
-  <tr>
-    <td><%= f.label :画像 %></td>
-    <td><%= f.attachment_field :image %></td>
-  </tr>
-  <tr>
-    <td><%= f.label :タイトル %></td>
-    <td><%= f.text_field :title %></td>
-  </tr>
-  <tr>
-    <td><%= f.label :説明文 %></td>
-    <td><%= f.text_area :caption %></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
+<div class="form-group">
+  <%= f.label :image %><br>
+  <%= f.attachment_field :image %>
+</div>
+
+<div class="form-group">
+  <%= f.label :title, class: "form-label" %>
+  <%= f.text_field :title, placeholder:"タイトル", class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :caption, class: "form-label" %>
+  <%= f.text_area :caption, placeholder: "説明文を入力してください", class: "form-control" %>
+</div>
+
 <% if local_assigns[:edit_flag].present? %>
 <!-- partialの指定したローカル変数に値が入っているか否かを判別し切り分ける -->
-</table>
-  <%= f.submit '編集を完了する' %>
-
+  <div class="actions">
+    <%= f.submit "編集を完了する", class: "btn btn-success btn-block" %>
+  </div>
 <% else %>
-</table>
-  <%= f.submit '投稿する' %>
-
+  <div class="actions">
+    <%= f.submit "投稿する", class: "btn btn-success btn-block" %>
+  </div>
 <% end %>

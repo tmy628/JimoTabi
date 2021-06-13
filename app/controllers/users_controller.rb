@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def like
     @user = User.find(params[:id])
-    likes = Like.where(user_id: current_user.id).pluck(:post_id)
+    likes = Like.where(user_id: @user.id).pluck(:post_id)
     # whereメソッドでlikesテーブルから自分のidが登録されているレコードを取得し、pluckメソッドで取得したレコードからpost_idを配列の形で取得
     @likes = Post.find(likes)
   end
