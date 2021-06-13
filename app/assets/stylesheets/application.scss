@@ -41,23 +41,30 @@
 
 
 
-.link {
+ .link {
+   color:#C0C0C0;
+   text-decoration: none;
+ }
 
-color:#C0C0C0;
-text-decoration: none;
+ .link:hover {
+   color:#000;
+   text-decoration:none;
+ }
 
-}
+ .link:active {
+   color:#999;
+   text-decoration:none;
+ }
 
-.link:hover {
+ .title-link {
+    color:#000;
+ }
 
-color:#000;
-text-decoration:none;
+ .vertical-middle{
+   display: inline-block; /* インライン要素にすることで横に回り込む */
+   vertical-align: middle; /* 上下中央に寄せる */
+ }
 
-}
-
-.link:active {
-
-color:#999;
-text-decoration:none;
-
-}
+ .user-info {
+   color:#C0C0C0;
+ }

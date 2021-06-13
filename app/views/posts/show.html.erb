@@ -1,32 +1,43 @@
-<div class="post-body">
-  <p><%= @post.title %></p>
-  <p>
-    <%= attachment_image_tag @post.user, :profile_image, :fill, 60, 60, format: 'jpeg', fallback: "no_image_user.jpg" %>
-    <%= @post.user.name %>
-    &nbsp|&nbsp更新日：
-    <%= @post.created_at.strftime('%Y年%-m月%-d日')%>
-  </p>
-  <%= attachment_image_tag @post, :image, :fill, 500, 500, format: 'jpeg', fallback: "no_image.jpg" %>
-  <p><%= @post.caption %></p>
+<div class="card col-sm-6 mx-auto my-5 p-3">
+  <div class="card-body">
+    <h1 class="card-title"><%= @post.title %></h1>
+    <div class="user-info">
+      <p class="vertical-middle">
+        <%= attachment_image_tag @post.user, :profile_image, :fill, 30, 30, format: 'jpeg', fallback: "no_image_user.jpg", size:'30x30' , class: "rounded-circle" %>
+      </p>
+      <p class="vertical-middle">
+        <%= link_to post_path(@post.id), class: "link" do %>
+          <%= @post.user.name %>
+         <% end %>
+      </p>
+      <p class="vertical-middle">
+        &nbsp|&nbsp更新日：<%= @post.created_at.strftime('%Y年%-m月%-d日')%>
+      </p>
+    </div>
+  </div>
+  <%= attachment_image_tag @post, :image, width: "100%", height:"auto", format: "jpeg", fallback: "no_image.jpg" %>
+  <div class="card-body">
+    <p class="card-text"><%= @post.caption %></p>
+      <!-- post.tag.tag_name -->
+      <!-- 投稿に関連づけられたタグを表示 -->
 
-  <!-- post.tag.tag_name -->
-  <!-- 投稿に関連づけられたタグを表示 -->
-
-  <!-- post.spot.address -->
-  <!-- 投稿に関連づけられた所在地を表示 -->
+      <!-- post.spot.address -->
+      <!-- 投稿に関連づけられた所在地を表示 -->
 
   <% if current_user != @post.user %>
     <div class="post-like">
       <% if @post.liked_by(current_user).blank? %>
-        <%= link_to "お気に入りに保存", post_likes_path(@post), method: :post %>
+        <%= link_to " お気に入りに保存", post_likes_path(@post), method: :post, class: "btn btn-warning btn-block fas fa-star" %>
       <% else %>
-        <%= link_to "保存済み", post_like_path(@post,@post.liked_by(current_user)), method: :delete %>
+        <%= link_to " 保存済み", post_like_path(@post,@post.liked_by(current_user)), method: :delete, class: "btn btn-warning btn-block far fa-star" %>
       <% end %>
     </div>
   <% end %>
 
   <% if @post.user == current_user %>
-    <%= link_to "編集する", edit_post_path(@post.id) %>
-    <%= link_to "削除する", post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' } %>
+    <%= link_to " 編集する", edit_post_path(@post), class: "btn btn-success btn-block fas fa-edit" %>
+    <hr class="border-dark">
+    <%= link_to " 削除する", post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-danger btn-block fas fa-trash-alt " %>
   <% end %>
+  </div>
 </div>

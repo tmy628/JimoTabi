@@ -26,30 +26,32 @@
               <div class="row">
                 <div class="col-sm-12">
                   <h4 class="card-title font-weight-bold">
-                    <%= link_to post_path(post.id) do %>
+                    <%= link_to post_path(post.id), class: "title-link" do %>
                       <%= post.title %>
                     <% end %>
                   </h4>
                 </div>
-                <div class="col-sm-12">
-                  <p class="card-text"><%= post.caption.truncate(24) %></p>
-                </div>
-                <div class="col-sm-4">
-                  <p class="card-text"><!-- post.spot.address --></p>
-                  <!-- 投稿に関連づけられた所在地を表示 -->
-                </div>
-                <div class="col-sm-8">
-                  <p class="card-text"><!-- post.tag.tag_name --></p>
-                  <!-- 投稿に関連づけられたタグを表示 -->
-                </div>
-                <div class="col-sm-8">
-                  <p>
-                    <%= post.created_at.strftime('%Y年%-m月%-d日')%>
-                    &nbsp|&nbsp
-                    <%= link_to user_path(post.user) do %>
-                    <%= post.user.name %>
-                    <% end %>
-                  </p>
+                <div class="user-info">
+                  <div class="col-sm-12">
+                    <p class="card-text"><%= post.caption.truncate(24) %></p>
+                  </div>
+                  <div class="col-sm-4">
+                    <p class="card-text"><!-- post.spot.address --></p>
+                    <!-- 投稿に関連づけられた所在地を表示 -->
+                  </div>
+                  <div class="col-sm-8">
+                    <p class="card-text"><!-- post.tag.tag_name --></p>
+                    <!-- 投稿に関連づけられたタグを表示 -->
+                  </div>
+                  <div class="col-sm-12">
+                    <p>
+                      <%= post.created_at.strftime('%Y年%-m月%-d日')%>
+                      &nbsp|&nbsp
+                      <%= link_to user_path(post.user), class: "link" do %>
+                      <%= post.user.name %>
+                      <% end %>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
