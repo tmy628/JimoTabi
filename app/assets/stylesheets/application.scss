@@ -31,16 +31,6 @@
    font-family: 'Sawarabi Mincho', sans-serif;
  }
 
- .post-image{
-   overflow: hidden; // 要素のボックスからはみ出した部分を隠す
-   cursor: pointer; // マウスカーソルを手の形にする
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
-
-
-
  .link {
    color:#C0C0C0;
  }
@@ -104,4 +94,14 @@
 
  .show-link:hover {
    color:#000;
+ }
+
+ .img {
+   opacity: 1;
+   -webkit-transition: .3s ease-in-out;
+   transition: .3s ease-in-out;
+ }
+
+  .img:hover {
+   opacity: .5;
  }
