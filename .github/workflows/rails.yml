@@ -1,9 +1,7 @@
 name: Rails CI/CD
 
 on:
-  push:
-    branches: [main]
-  merge:
+  [push, merge]:
     branches: [main]
 
 jobs:
