@@ -1,0 +1,25 @@
+<div class="form-group">
+  <%= f.label :image %><br>
+  <%= f.attachment_field :image %>
+</div>
+
+<div class="form-group">
+  <%= f.label :title, class: "form-label" %>
+  <%= f.text_field :title, placeholder:"タイトル", class: "form-control" %>
+</div>
+
+<div class="form-group">
+  <%= f.label :caption, class: "form-label" %>
+  <%= f.text_area :caption, placeholder: "説明文を入力してください", class: "form-control" %>
+</div>
+
+<% if local_assigns[:edit_flag].present? %>
+<!-- partialの指定したローカル変数に値が入っているか否かを判別し切り分ける -->
+  <div class="actions">
+    <%= f.submit "編集を完了する", class: "btn btn-success btn-block" %>
+  </div>
+<% else %>
+  <div class="actions">
+    <%= f.submit "投稿する", class: "btn btn-success btn-block" %>
+  </div>
+<% end %>

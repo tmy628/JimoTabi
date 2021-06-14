@@ -13,3 +13,116 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box
+ }
+
+ .heading {
+   font-size: 32px;
+ }
+
+ body {
+   font-family: 'Sawarabi Mincho', sans-serif;
+ }
+
+ .link {
+   color:#C0C0C0;
+ }
+
+ .link:hover {
+   color:#000;
+ }
+
+ .link:active {
+   color:#999;
+ }
+
+ .title-link {
+   color:#000;
+ }
+
+ .title-link:hover {
+   color:#000;
+ }
+
+ .vertical-middle{
+   display: inline-block; /* インライン要素にすることで横に回り込む */
+   vertical-align: middle; /* 上下中央に寄せる */
+ }
+
+ .user-info {
+   color:#C0C0C0;
+ }
+
+ .like-btn {
+    width: 25px;
+    height: 30px;
+    font-size: 25px;
+    color: #808080;
+    margin-left: 20px;
+ }
+
+ .unlike-btn {
+    width: 25px;
+    height: 30px;
+    font-size: 25px;
+    color: #ffcc33;
+    margin-left: 20px;
+ }
+
+ .fa-link {
+   text-decoration: none;
+ }
+
+ .fa-link:hover {
+   text-decoration:none;
+ }
+
+ .fa-link:active {
+   text-decoration:none;
+ }
+
+ .show-link {
+   color:#000;
+ }
+
+ .show-link:hover {
+   color:#000;
+ }
+
+ .img {
+   opacity: 1;
+   -webkit-transition: .3s ease-in-out;
+   transition: .3s ease-in-out;
+ }
+
+  .img:hover {
+   opacity: .5;
+ }
+
+ .font_space {
+  letter-spacing: 0.3em;
+  font-weight: bold;
+ }
+
+ .pagination>li>a {
+   border: none;     /*枠線をなくす*/
+   color: #696969;   /*文字の色を変える*/
+ }
+
+ /* 表示しているページ番号のデザイン */
+ .pagination>.active>a {
+   background: #93c9ff;     /*背景の色を変える*/
+   border-radius: 15px;     /*角を丸くする*/
+ }
+
+ /*ホバー時のデザイン*/
+ .pagination>li>a:hover {
+   border-radius: 15px;    /*角を丸くする*/
+ }
