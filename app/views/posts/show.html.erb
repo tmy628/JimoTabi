@@ -30,18 +30,18 @@
     <p class="card-text"><%= @post.spot.address %></p>
     <div class="show_maps" id="show_map" style="height: 320px; width: 400px;"></div>
 
-  <% if current_user != @post.user %>
-    <% if @post.liked_by(current_user).blank? %>
-      <%= link_to " お気に入りに保存", post_likes_path(@post), method: :post, class: "btn btn-warning btn-lg btn-block far fa-star" %>
-    <% else %>
-      <%= link_to " 保存済み", post_like_path(@post,@post.liked_by(current_user)), method: :delete, class: "btn btn-warning btn-lg btn-block fas fa-star" %>
+    <% if current_user != @post.user %>
+      <% if @post.liked_by(current_user).blank? %>
+        <%= link_to " お気に入りに保存", post_likes_path(@post), method: :post, class: "btn btn-warning btn-lg btn-block far fa-star" %>
+      <% else %>
+        <%= link_to " 保存済み", post_like_path(@post,@post.liked_by(current_user)), method: :delete, class: "btn btn-warning btn-lg btn-block fas fa-star" %>
+      <% end %>
     <% end %>
-  <% end %>
 
-  <% if @post.user == current_user %>
-    <%= link_to " 編集する", edit_post_path(@post), class: "btn btn-success btn-lg btn-block fas fa-edit" %>
-    <hr class="border-dark">
-    <%= link_to " 削除する", post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-danger btn-lg btn-block fas fa-trash-alt" %>
-  <% end %>
+    <% if @post.user == current_user %>
+      <%= link_to " 編集する", edit_post_path(@post), class: "btn btn-success btn-lg btn-block fas fa-edit" %>
+      <hr class="border-dark">
+      <%= link_to " 削除する", post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-danger btn-lg btn-block fas fa-trash-alt" %>
+    <% end %>
   </div>
 </div>

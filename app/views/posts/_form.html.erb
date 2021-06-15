@@ -15,11 +15,11 @@
 
 <div class="form-group">
   <%= f.fields_for :spot do |s| %>
-    <%= s.label :address, "場所(Google Mapで検索)", class: "form-label spot_title" %>
+    <%= s.label :address, "場所(Google Mapで検索)", class: "spot_title" %>
     <%= s.text_field :address, placeholder: "スポットを入力", id: "address", class: "spot_text" %>
   <% end %>
   <input type="button" onclick="codeAddress()" value="検索する">
-  <div class="map" id="map" style="height: 320px; width: 640px;"></div>
+  <div class="map" id="map" style="height: 320px; width: 400px;"></div>
 </div>
 
 <% if local_assigns[:edit_flag].present? %>
