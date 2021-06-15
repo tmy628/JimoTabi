@@ -19,7 +19,7 @@
     <%= s.text_field :address, placeholder: "スポットを入力", id: "address", class: "spot_text" %>
   <% end %>
   <input type="button" onclick="codeAddress()" value="検索する">
-  <div class="map" id="map" style="height: 320px; width: 400px;"></div>
+  <div class="map" id="map" style="height: 320px; width: 100%;"></div>
 </div>
 
 <% if local_assigns[:edit_flag].present? %>

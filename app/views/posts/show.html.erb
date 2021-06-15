@@ -27,8 +27,11 @@
       <!-- post.tag.tag_name -->
       <!-- 投稿に関連づけられたタグを表示 -->
 
-    <p class="card-text"><%= @post.spot.address %></p>
-    <div class="show_maps" id="show_map" style="height: 320px; width: 400px;"></div>
+    <% if @post.spot != nil %>
+      <p class="card-text"><%= @post.spot.address %>
+        <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
+      </p>
+    <% end %>
 
     <% if current_user != @post.user %>
       <% if @post.liked_by(current_user).blank? %>

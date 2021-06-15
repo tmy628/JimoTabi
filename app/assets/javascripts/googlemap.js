@@ -5,7 +5,7 @@ function initMap(){ //コールバック関数
   geocoder = new google.maps.Geocoder() //GoogleMapsAPIジオコーディングサービスにアクセス
   if(document.getElementById('map')){ //'map'というidを取得できたら実行
     map = new google.maps.Map(document.getElementById('map'), { //'map'というidを取得してマップを表示
-      center: {lat: 35.41269, lng: 139.4524549}, //最初に表示する場所（初期値：東京都千代田区）
+      center: {lat: 35.6594666, lng: 139.7005536}, //最初に表示する場所（初期値：渋谷スクランブル交差点）
       zoom: 15, //拡大率（1〜21まで設定可能）
     });
   }else{ //'map'というidが無かった場合
