@@ -27,8 +27,8 @@
       <!-- post.tag.tag_name -->
       <!-- 投稿に関連づけられたタグを表示 -->
 
-      <!-- post.spot.address -->
-      <!-- 投稿に関連づけられた所在地を表示 -->
+    <p class="card-text"><%= @post.spot.address %></p>
+    <div class="show_maps" id="show_map" style="height: 320px; width: 400px;"></div>
 
   <% if current_user != @post.user %>
     <% if @post.liked_by(current_user).blank? %>
