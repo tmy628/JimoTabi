@@ -11,7 +11,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    tag_list = params[:post][:tag_name].split(nil)
+    # formから@postオブジェクトを参照してタグの名前も一緒に送信するのでこの形で取得する .split(nil)で送信されてきた値を、スペースで区切って配列化
     if @post.save
+      @post.save_tag(tag_list)
+      # 取得したタグの配列をデータベースに保存する処理
       redirect_to post_path(@post)
     else
       render :new
