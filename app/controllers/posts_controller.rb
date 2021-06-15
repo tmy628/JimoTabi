@@ -24,6 +24,11 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @likes_count = Like.where(post_id: @post.id).count
+    @lat = @post.spot.latitude
+    @lng = @post.spot.longitude
+    # 定義した@latと@lngの変数をJavaScriptでも扱えるように、それぞれgon.latとgon.lngに代入
+    gon.lat = @lat
+    gon.lng = @lng
   end
 
   def edit
