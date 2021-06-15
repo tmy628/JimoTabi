@@ -4,6 +4,8 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post.build_spot
+    # .buildメソッドではhas_oneの関係にあたるので@post.spot.buildとする
   end
 
   def create
@@ -56,7 +58,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :image, :caption)
+    params.require(:post).permit(:title, :image, :caption, spot_attributes: [:address])
   end
 
   # ログインユーザーでなければ投稿の編集・削除ができないように権限を設定する
