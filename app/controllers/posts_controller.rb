@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @post.build_spot
-    # .buildメソッドではhas_oneの関係にあたるので@post.spot.buildとする
+    # .buildメソッドではhas_oneの関係にあたるので@post.build_spotとする
   end
 
   def create
