@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   belongs_to :user
 
   has_one :spot, dependent: :destroy
+  accepts_nested_attributes_for :spot
 
   has_many :tag_maps, dependent: :destroy
   has_many :tags, through: :tag_maps
@@ -9,7 +10,7 @@ class Post < ApplicationRecord
 
   attachment :image
 
-  validates :image, presence: true, presence: { message: 'を選択してください' }
+  validates :image, presence: { message: 'を選択してください' }
   validates :title, presence: true
   validates :caption, presence: true, length: { maximum: 200 }
 
