@@ -24,8 +24,13 @@
   <%= attachment_image_tag @post, :image, width: "100%", height:"auto", format: "jpeg", fallback: "no_image.jpg" %>
   <div class="card-body">
     <p class="card-text"><%= @post.caption %></p>
-      <!-- post.tag.tag_name -->
-      <!-- 投稿に関連づけられたタグを表示 -->
+    <% if @post.tags != nil %>
+      <%= @post_tags.each do |tag| %>
+      <span>
+        <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id)%>
+        <%= "(#{tag.posts.count})" %>
+      </span>
+    <% end %>
 
     <% if @post.spot != nil %>
       <p class="card-text"><%= @post.spot.address %>
