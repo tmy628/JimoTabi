@@ -14,6 +14,13 @@
 </div>
 
 <div class="form-group">
+  <%= "スペースを入力することで複数のタグを付けることができます。" %>
+  <%= "例：お土産 グルメ 穴場スポット" %>
+  <%= f.label :tag_name, class: "form-label" %>
+  <%= f.text_area :tag_name, placeholder: "タグの名前を入力", class: "form-control" %>
+</div>
+
+<div class="form-group">
   <%= f.fields_for :spot do |s| %>
     <%= s.label :address, "場所(Google Mapで検索)", class: "spot_title" %>
     <%= s.text_field :address, placeholder: "スポットを入力", id: "address", class: "spot_text" %>
