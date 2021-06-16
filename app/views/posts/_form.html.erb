@@ -13,6 +13,23 @@
   <%= f.text_area :caption, placeholder: "説明文を入力してください", class: "form-control" %>
 </div>
 
+<% if local_assigns[:edit_flag].present? %>
+<!-- partialの指定したローカル変数に値が入っているか否かを判別し切り分ける -->
+  <div class="form-group">
+    <%= f.label :tag_name, class: "form-label" %><br>
+    <%= "カンマ（,）で区切ることで複数のタグを付けることができます。" %><br>
+    <%= "例：お土産,グルメ,穴場スポット" %>
+    <%= f.text_field :tag_name, value: @tag_list, placeholder: "付けたいタグの名前を入力", class: "form-control" %>
+  </div>
+<% else %>
+  <div class="form-group">
+    <%= f.label :tag_name, class: "form-label" %><br>
+    <%= "カンマ（,）で区切ることで複数のタグを付けることができます。" %><br>
+    <%= "例：お土産,グルメ,穴場スポット" %>
+    <%= f.text_field :tag_name, placeholder: "付けたいタグの名前を入力", class: "form-control" %>
+  </div>
+<% end %>
+
 <div class="form-group">
   <%= f.fields_for :spot do |s| %>
     <%= s.label :address, "場所(Google Mapで検索)", class: "spot_title" %>
