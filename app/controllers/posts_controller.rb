@@ -65,6 +65,7 @@ class PostsController < ApplicationController
   end
 
   def search
+
   end
 
   private

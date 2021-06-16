@@ -26,10 +26,11 @@
     <p class="card-text"><%= @post.caption %></p>
     <% if @post.tags != nil %>
       <%= @post_tags.each do |tag| %>
-      <span>
-        <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id)%>
-        <%= "(#{tag.posts.count})" %>
-      </span>
+        <p class="card-text">
+          <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id)%>
+          <%= "(#{tag.posts.count})" %>
+         </p>
+      <% end %>
     <% end %>
 
     <% if @post.spot != nil %>
