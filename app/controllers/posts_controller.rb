@@ -25,6 +25,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.page(params[:page]).reverse_order
     # 1ページ分の決められた数のデータだけを、新しい順に取得するように変更
+    @tag_list = Tag.all
   end
 
   def show
@@ -37,6 +38,10 @@ class PostsController < ApplicationController
       # 定義した@latと@lngの変数をJavaScriptでも扱えるように、それぞれgon.latとgon.lngに代入
       gon.lat = @lat
       gon.lng = @lng
+    end
+    # 投稿内容のタグの値がnilでなければ、投稿詳細画面にタグを表示する
+    if @post.tags != nil
+      @post_tags = @post.tags
     end
   end
 
