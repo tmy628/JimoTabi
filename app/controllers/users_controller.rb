@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.page(params[:page]).reverse_order
     # ユーザーに関連づけられた投稿のみ、@postsに渡す
+    @tag_list = Tag.all
   end
 
   def edit
@@ -26,6 +27,7 @@ class UsersController < ApplicationController
     likes = Like.where(user_id: @user.id).pluck(:post_id)
     # whereメソッドでlikesテーブルから自分のidが登録されているレコードを取得し、pluckメソッドで取得したレコードからpost_idを配列の形で取得
     @likes = Post.find(likes)
+    @tag_list = Tag.all
   end
 
   private

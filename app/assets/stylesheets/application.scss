@@ -81,19 +81,19 @@
  }
 
  .fa-link:hover {
-   text-decoration:none;
+   text-decoration: none;
  }
 
  .fa-link:active {
-   text-decoration:none;
+   text-decoration: none;
  }
 
  .show-link {
-   color:#000;
+   color: #000;
  }
 
  .show-link:hover {
-   color:#000;
+   color: #000;
  }
 
  .img {
@@ -102,7 +102,7 @@
    transition: .3s ease-in-out;
  }
 
-  .img:hover {
+ .img:hover {
    opacity: .5;
  }
 
@@ -125,4 +125,16 @@
  /*ホバー時のデザイン*/
  .pagination>li>a:hover {
    border-radius: 15px;    /*角を丸くする*/
+ }
+
+ .tag_link {
+   color:#000;
+ }
+
+ .tag_link:hover {
+   color:#000;
+ }
+
+ .fa-hashtag {
+
  }
