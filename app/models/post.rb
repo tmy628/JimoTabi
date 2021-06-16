@@ -35,4 +35,9 @@ class Post < ApplicationRecord
       self.tags << post_tag
     end
   end
+
+  def self.search(search)
+    return Post.all unless search
+    Post.where(['title LIKE ? OR caption LIKE ? OR address LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%"])
+  end
 end
