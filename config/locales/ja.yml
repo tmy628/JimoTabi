@@ -26,6 +26,8 @@ ja:
         title: タイトル
         caption: 説明文
         tag_name: タグ
+      spot:
+        address: スポット
       like:
         user_id: ユーザーID
       tag_map:
