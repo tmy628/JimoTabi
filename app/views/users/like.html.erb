@@ -19,13 +19,13 @@
       </div>
 
       <% if @likes.length != 0 %>
-        <% @likes.each do |post| %>
+        <% @likes.each do |like| %>
         <div class="card my-3 p-3">
           <div class="row no-gutters">
             <div class="col-md-4 my-auto">
               <div class="post-image">
-                <%= link_to post_path(post.id) do %>
-                  <%= attachment_image_tag post, :image, width: "100%", height:"auto", format: "jpeg", fallback: "no_image.jpg", class: "img" %>
+                <%= link_to post_path(like.post.id) do %>
+                  <%= attachment_image_tag like.post, :image, width: "100%", height:"auto", format: "jpeg", fallback: "no_image.jpg", class: "img" %>
                 <% end %>
               </div>
             </div>
@@ -34,21 +34,21 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <h4 class="card-title font-weight-bold">
-                      <%= link_to post_path(post.id), class: "title-link" do %>
-                        <%= post.title %>
+                      <%= link_to post_path(like.post.id), class: "title-link" do %>
+                        <%= like.post.title %>
                       <% end %>
                     </h4>
                   </div>
                   <div class="user-info">
                     <div class="col-sm-12">
-                      <p class="card-text"><%= post.caption.truncate(24) %></p>
+                      <p class="card-text"><%= like.post.caption.truncate(24) %></p>
                     </div>
                     <div class="col-sm-12">
                       <p>
-                        <%= post.created_at.strftime('%Y年%-m月%-d日')%>
+                        <%= like.post.created_at.strftime('%Y年%-m月%-d日')%>
                         &nbsp|&nbsp
-                        <%= link_to user_path(post.user), class: "link" do %>
-                        <%= post.user.name %>
+                        <%= link_to user_path(like.post.user), class: "link" do %>
+                        <%= like.post.user.name %>
                         <% end %>
                       </p>
                     </div>
@@ -66,7 +66,11 @@
           </div>
         </div>
       <% end %>
-      <!-- paginate @like -->
+      <div class="row">
+        <div class="mx-auto">
+          <p class="d-flex align-items-center"><%= paginate @likes %></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
