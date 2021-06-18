@@ -17,7 +17,6 @@
   background-color: rgba( 0, 0, 0, 0.5);
 }
 
-
 .top-title {
   padding-top: 70px;
   font-size: 170px;
@@ -43,7 +42,7 @@
 
 .about_head {
   font-size: 40px;
-  background: linear-gradient(transparent 50%, #ff9999 0%);
+  background: linear-gradient(transparent 50%, #ff9999 0%); // ラインマーカー
 }
 
 .about_body {
@@ -51,7 +50,7 @@
   line-height: 3;
   font-size: 20px;
 }
-// ラインマーカー
+
 
 /* 画面幅が960px未満の時は */
 @media (max-width: 959px) {
