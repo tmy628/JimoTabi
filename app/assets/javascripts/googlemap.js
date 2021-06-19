@@ -4,7 +4,6 @@ let geocoder //変数の定義
 /*global google*/
 
 function initMap(){ //コールバック関数
-  console.log('how many times passed')
   geocoder = new google.maps.Geocoder() //GoogleMapsAPIジオコーディングサービスにアクセス
   if(document.getElementById('map')){ //'map'というidを取得できたら実行
     map = new google.maps.Map(document.getElementById('map'), { //'map'というidを取得してマップを表示
@@ -12,7 +11,6 @@ function initMap(){ //コールバック関数
       zoom: 15, //拡大率（1〜21まで設定可能）
     });
   }else if(document.getElementById('show_map')){ //'map'というidが無かった場合
-    console.log(document.getElementById('show_map'))
     map = new google.maps.Map(document.getElementById('show_map'), { //'show_map'というidを取得してマップを表示
       /*global gon*/
       center: {lat: gon.lat, lng: gon.lng}, //controllerで定義した変数を緯度・経度の値とする（値はDBに入っている）
@@ -24,8 +22,6 @@ function initMap(){ //コールバック関数
     });
   }
 }
-
-
 
 function codeAddress(){ //コールバック関数
   let inputAddress = document.getElementById('address').value; //'address'というidの値（value）を取得
