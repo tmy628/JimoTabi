@@ -39,8 +39,8 @@
       </p>
     <% end %>
 
-      <div id="likes_buttons_<%= post.id %>">
-         <%= render partial: 'posts/like', locals: { post: post} %>
+      <div class="like" id="likes_buttons_<%= @post.id %>">
+         <%= render 'likes/like', post: @post %>
       </div>
 
     <% if @post.user == current_user %>
