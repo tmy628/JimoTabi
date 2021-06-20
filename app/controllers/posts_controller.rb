@@ -23,7 +23,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.page(params[:page]).reverse_order
+    @posts = Post.includes(:user).page(params[:page]).reverse_order
     # 1ページ分の決められた数のデータだけを、新しい順に取得するように変更
     @tag_list = Tag.all
   end
@@ -70,7 +70,7 @@ class PostsController < ApplicationController
   def search
     @tag_list = Tag.all
     @tag = Tag.find(params[:tag_id])
-    @posts = @tag.posts.page(params[:page]).reverse_order
+    @posts = @tag.posts.includes(:user).page(params[:page]).reverse_order
   end
 
   private

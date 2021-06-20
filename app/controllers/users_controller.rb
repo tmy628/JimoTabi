@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
   def like
     @user = User.find(params[:id])
-    @likes = @user.likes.page(params[:page]).reverse_order
+    @likes = @user.likes.includes(post: :user).page(params[:page]).reverse_order
     # どのユーザーがどの投稿をお気に入りしているか
     @tag_list = Tag.all
   end
