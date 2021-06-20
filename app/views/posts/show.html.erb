@@ -25,11 +25,11 @@
   <div class="card-body">
     <p class="card-text"><%= @post.caption %></p>
     <% if @post.tags != nil %>
-      <%= "タグ: " %>
       <% @post_tags.each do |tag| %>
-        <span class="card-text">
-          <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id) %>
-        </span>
+          <p class="card-text tag">
+            <i class="fas fa-hashtag"></i>
+            <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id), class: "tag_link"%>
+          </p>
       <% end %>
     <% end %>
 
