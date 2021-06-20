@@ -33,15 +33,13 @@
       <% end %>
     <% end %>
 
-    <% if @post.spot != nil %>
-      <p class="card-text"><%= @post.spot.address %>
-        <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
-      </p>
-    <% end %>
+    <p class="card-text"><%= @post.spot.address %>
+      <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
+    </p>
 
-      <div class="like" id="likes_buttons_<%= @post.id %>">
-         <%= render 'likes/like', post: @post %>
-      </div>
+    <div class="like" id="likes_buttons_<%= @post.id %>">
+       <%= render 'likes/like', post: @post %>
+    </div>
 
     <% if @post.user == current_user %>
       <div data-turbolinks="false">
