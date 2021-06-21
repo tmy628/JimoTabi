@@ -10,11 +10,14 @@
 
         <% if user_signed_in? %>
           <ul class="navbar-nav mr-auto">
-            <!--レイアウトの修正が必要 検索窓の中に虫眼鏡マークを入れて検索ボタンを消したい-->
             <div class="fuzzy_search">
-              <%= form_tag(searches_path,method: :get) do %>
-                <%= text_field_tag :search, "", placeholder: "何かお探しですか？" %>
-                <%= submit_tag '検索', :title => nil, :caption => nil %>
+              <%= form_tag(searches_path, method: :get) do %>
+                <div class="input-group">
+                  <%= text_field_tag :search, "", placeholder: "検索ワードを入力", class: "form-control" %>
+                  <span class="input-group-btn">
+                    <%= submit_tag ' 検索 ', :title => nil, :caption => nil, class: "btn btn-outline-dark" %>
+                  </span>
+                </div>
               <% end %>
             </div>
           </ul>
