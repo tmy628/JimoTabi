@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(version: 2021_06_21_070352) do
   end
 
   create_table "spots", force: :cascade do |t|
-    t.string "address"
-    t.float "latitude"
-    t.float "longitude"
+    t.string "address", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
     t.integer "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
