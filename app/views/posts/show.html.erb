@@ -3,21 +3,17 @@
     <h1 class="card-title font-weight-bold"><%= @post.title %></h1>
     <div class="row">
       <div class="col-sm-12">
-        <div class="row">
-          <div class="col-sm-6">
-            <p class="vertical-middle">
-              <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle" %>
-            </p>
-            <p class="vertical-middle">
-              <%= link_to post_path(@post.id), class: "show-link" do %>
-                <%= @post.user.name %>
-               <% end %>
-            </p>
-            <p class="vertical-middle">
-              &nbsp|&nbsp更新日：<%= @post.created_at.strftime('%Y年%-m月%-d日')%>
-            </p>
-          </div>
-        </div>
+        <p class="vertical-middle">
+          <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle" %>
+        </p>
+        <p class="vertical-middle">
+          <%= link_to post_path(@post.id), class: "show-link" do %>
+            <%= @post.user.name %>
+           <% end %>
+        </p>
+        <p class="vertical-middle">
+          &nbsp|&nbsp更新日：<%= @post.created_at.strftime('%Y年%-m月%-d日')%>
+        </p>
       </div>
     </div>
   </div>
@@ -33,7 +29,8 @@
       <% end %>
     <% end %>
 
-    <p class="card-text"><%= @post.spot.address %>
+    <p class="card-text">
+      <%= @post.spot.address %>
       <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
     </p>
 
