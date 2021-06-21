@@ -31,8 +31,23 @@
    font-family: 'Sawarabi Mincho', sans-serif;
  }
 
+ .index-link {
+   color:#808080;
+   background:
+       linear-gradient(currentColor 0 0)
+       bottom /var(--d, 20%) 3px
+       no-repeat;
+   transition:0.5s;
+  }
+
+ .index-link:hover {
+   color: #000;
+   text-decoration: none;
+   --d: 80%;
+ }
+
  .link {
-   color:#C0C0C0;
+   color:#808080;
  }
 
  .link:hover {
@@ -57,23 +72,7 @@
  }
 
  .user-info {
-   color: #C0C0C0;
- }
-
- .like-btn {
-    width: 25px;
-    height: 30px;
-    font-size: 25px;
-    color: #808080;
-    margin-left: 20px;
- }
-
- .unlike-btn {
-    width: 25px;
-    height: 30px;
-    font-size: 25px;
-    color: #ffcc33;
-    margin-left: 20px;
+   color: #808080;
  }
 
  .fa-link {
@@ -107,7 +106,7 @@
  }
 
  .font_space {
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   font-weight: bold;
  }
 
@@ -137,4 +136,16 @@
 
  .fa-hashtag {
    color: #C0C0C0;
+ }
+
+ .tag {
+   display: inline-block;
+ }
+
+ .footer {
+   background-color: #eeeeee;
+ }
+
+ .copyright {
+   color: #999999;
  }

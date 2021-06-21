@@ -1,4 +1,4 @@
-<div class="card col-sm-8 mx-auto my-5 p-3">
+<div class="card col-md-6 mx-auto my-5 p-3">
   <div class="card-body">
     <h1 class="card-title font-weight-bold"><%= @post.title %></h1>
     <div class="row">
@@ -25,23 +25,21 @@
   <div class="card-body">
     <p class="card-text"><%= @post.caption %></p>
     <% if @post.tags != nil %>
-      <%= "タグ: " %>
       <% @post_tags.each do |tag| %>
-        <span class="card-text">
-          <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id) %>
-        </span>
+          <p class="card-text tag">
+            <i class="fas fa-hashtag"></i>
+            <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id), class: "tag_link"%>
+          </p>
       <% end %>
     <% end %>
 
-    <% if @post.spot != nil %>
-      <p class="card-text"><%= @post.spot.address %>
-        <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
-      </p>
-    <% end %>
+    <p class="card-text"><%= @post.spot.address %>
+      <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
+    </p>
 
-      <div class="like" id="likes_buttons_<%= @post.id %>">
-         <%= render 'likes/like', post: @post %>
-      </div>
+    <div class="like" id="likes_buttons_<%= @post.id %>">
+       <%= render 'likes/like', post: @post %>
+    </div>
 
     <% if @post.user == current_user %>
       <div data-turbolinks="false">
