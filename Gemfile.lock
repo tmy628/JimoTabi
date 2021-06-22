@@ -364,7 +364,7 @@ DEPENDENCIES
   bootstrap (~> 4.5)
   bullet
   byebug
-  capybara (>= 2.15)
+  capybara
   coffee-rails (~> 4.2)
   devise
   devise-i18n
