@@ -35,13 +35,6 @@ RSpec.describe 'Postモデルのテスト', type: :model do
         is_expected.to eq false
       end
     end
-
-    context 'addressカラム' do
-      it '空欄でないこと' do
-        post.spot.address = ''
-        is_expected.to eq false
-      end
-    end
   end
 
   describe 'アソシエーションのテスト' do
