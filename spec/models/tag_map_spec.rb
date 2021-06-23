@@ -8,7 +8,6 @@ RSpec.describe 'TagMapモデルのテスト', type: :model do
     let!(:post) { create(:post, user_id: user.id) }
     let(:tag_map) { create(:tag_map, post_id: post.id, tag_id: tag.id) }
 
-
     it "post_idとtag_idがある場合、有効であること" do
       expect(tag_map).to be_valid
     end
