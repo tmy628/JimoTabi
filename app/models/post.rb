@@ -1,7 +1,10 @@
 class Post < ApplicationRecord
   belongs_to :user
 
+  # TagMapモデルのテスト時OFF
   has_one :spot, dependent: :destroy
+
+  # TagMapモデルのテスト時OFF
   accepts_nested_attributes_for :spot
 
   has_many :tag_maps, dependent: :destroy
@@ -10,7 +13,9 @@ class Post < ApplicationRecord
 
   attachment :image
 
+  # TagMapモデルのテスト時OFF
   validates :image, presence: { message: 'を選択してください' }
+
   validates :title, presence: true
   validates :caption, presence: true, length: { maximum: 200 }
 
