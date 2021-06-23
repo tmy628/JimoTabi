@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :spot do
-    sequence(:address) { |n| "address-#{n}" }
+    address { '東京都' }
   end
 end
