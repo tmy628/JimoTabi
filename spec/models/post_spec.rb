@@ -38,7 +38,7 @@ RSpec.describe 'Postモデルのテスト', type: :model do
 
     context 'addressカラム' do
       it '空欄でないこと' do
-        post.address = ''
+        post.spot.address = ''
         is_expected.to eq false
       end
     end
@@ -47,31 +47,31 @@ RSpec.describe 'Postモデルのテスト', type: :model do
   describe 'アソシエーションのテスト' do
     context 'Userモデルとの関係' do
       it 'N:1となっている' do
-        expect(Book.reflect_on_association(:user).macro).to eq :belongs_to
+        expect(Post.reflect_on_association(:user).macro).to eq :belongs_to
       end
     end
 
     context 'Spotモデルとの関係' do
       it '1:1となっている' do
-        expect(User.reflect_on_association(:spot).macro).to eq :has_one
+        expect(Post.reflect_on_association(:spot).macro).to eq :has_one
       end
     end
 
     context 'TagMapモデルとの関係' do
       it '1:Nとなっている' do
-        expect(User.reflect_on_association(:tag_maps).macro).to eq :has_many
+        expect(Post.reflect_on_association(:tag_maps).macro).to eq :has_many
       end
     end
 
     context 'Tagモデルとの関係' do
       it '1:Nとなっている' do
-        expect(User.reflect_on_association(:tags).macro).to eq :has_many
+        expect(Post.reflect_on_association(:tags).macro).to eq :has_many
       end
     end
 
     context 'Likeモデルとの関係' do
       it '1:Nとなっている' do
-        expect(User.reflect_on_association(:likes).macro).to eq :has_many
+        expect(Post.reflect_on_association(:likes).macro).to eq :has_many
       end
     end
   end
