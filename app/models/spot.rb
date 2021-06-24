@@ -14,9 +14,9 @@ class Spot < ApplicationRecord
   # バリデーションに成功し、実際にオブジェクトが保存される直前で実行
 
   def print_address
-    pp self.address
-    pp self.latitude
-    pp self.longitude
+    pp address
+    pp latitude
+    pp longitude
   end
   # print_addressが実行された時、インスタンス変数のaddress・latitude・longitudeを参照
 end

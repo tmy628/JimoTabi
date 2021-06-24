@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
 
   # 検索したレコードを表示するアクションへのルーティング
-  resources :searches,only:[:index]
+  resources :searches, only: [:index]
 
   # ゲストログイン用
   devise_scope :user do

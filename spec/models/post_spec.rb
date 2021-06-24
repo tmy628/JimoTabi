@@ -9,8 +9,8 @@ RSpec.describe 'Postモデルのテスト', type: :model do
 
     context 'imageカラム' do
       it '空欄でないこと' do
-         post.title = ''
-         is_expected.to eq false
+        post.title = ''
+        is_expected.to eq false
       end
     end
 

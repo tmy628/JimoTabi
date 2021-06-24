@@ -1,6 +1,14 @@
 inherit_from:
   - .rubocop_airbnb.yml
 
+# 日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+
+# 行の文字数の上限を120に設定
+LineLength:
+  Max: 120
+
 # rubocopでコード解析したくないファイルやフォルダを指定
 AllCops:
   Exclude:
