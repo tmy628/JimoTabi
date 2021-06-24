@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+  scroll-behavior: smooth;
+
+}
+
 .top {
   width: 100%;
-  height: 550px;
+  height: auto;
   text-align: center;
   background-image: image-url("top_image.jpg");
   background-size: cover;
@@ -13,20 +18,19 @@
 
 .top-content {
   width: 100%;
-  height: 550px;
+  height: auto;
   background-color: rgba( 0, 0, 0, 0.5);
 }
 
-
 .top-title {
-  padding-top: 100px;
+  padding-top: 70px;
   font-size: 170px;
   color: #fff
 }
 
 .top-theme {
   padding-top: 10px;
-  font-size: 50px;
+  font-size: 40px;
   color: #fff
 }
 
@@ -34,9 +38,88 @@
   padding-top: 10px;
 }
 
-.about-h1{
-  background: linear-gradient(transparent 50%, #ff9999 0%);
+.about {
+  width: 100%;
+  height: auto;
+  padding: 5em;
 }
-// ラインマーカー
+
+.head{
+  text-align: center;
+  padding: 15px 0;
+}
+
+.about-head {
+  font-size: 40px;
+  background: linear-gradient(transparent 50%, #ff9999 0%); // ラインマーカー
+}
+
+.about-body {
+  margin-top: 30px;
+  line-height: 3;
+  font-size: 20px;
+  text-align: center;
+}
 
 
+/* 画面幅が960px未満の時は */
+@media (max-width: 959px) {
+  .ps-br{
+    display: none; /* PCの改行を隠す */
+  }
+
+  .top-title {
+    padding-top: 70px;
+    font-size: 100px;
+    color: #fff
+  }
+
+  .top-theme {
+    padding-top: 10px;
+    font-size: 30px;
+    color: #fff
+  }
+
+  .about-head {
+    font-size: 40px;
+    background: linear-gradient(transparent 50%, #ff9999 0%);
+  }
+
+  .about-body {
+    margin-top: 25px;
+    line-height: 2;
+    font-size: 20px;
+    text-align: left;
+  }
+}
+
+/* 画面幅が520px未満の時は */
+@media (max-width: 519px) {
+  .ps-br{
+    display: none; /* PCの改行を隠す */
+  }
+
+  .top-title {
+    padding-top: 70px;
+    font-size: 60px;
+    color: #fff
+  }
+
+  .top-theme {
+    padding-top: 10px;
+    font-size: 17px;
+    color: #fff
+  }
+
+  .about-head {
+    font-size: 25px;
+    background: linear-gradient(transparent 50%, #ff9999 0%);
+  }
+
+  .about-body {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 20px;
+    text-align: left;
+  }
+}

@@ -1,2 +1,33 @@
-<h1>Searches#index</h1>
-<p>Find me in app/views/searches/index.html.erb</p>
+<div class="container my-4">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+      <div>
+        <%= render 'users/info', user: current_user %>
+      </div>
+      <div>
+        <%= render 'posts/tag_list', tag_list: @tag_list %>
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 offset-lg-1">
+      <div class="row">
+        <div class="col-md text-center">
+          <h4 class="mt-3 mt-3 font_space search-result-head">
+            <%= "─ " %><%= @search %>
+            <span class="search-result-head-text">
+              <%= " ─ の検索結果" %>
+            </span>
+          </h4>
+        </div>
+      </div>
+      <div class="search-result-number">
+        <%= "1-#{@posts.count}件表示" %>
+      </div>
+      <%= render 'posts/index', posts: @posts%>
+      <div class="row">
+        <div class="mx-auto">
+          <p class="d-flex align-items-center"><%= paginate @posts %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

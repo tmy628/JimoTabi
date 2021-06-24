@@ -12,6 +12,7 @@ ja:
       post: 投稿
       like: お気に入り
       tag_map: タグ付け
+      tag: タグ
     attributes:
       user:
         name: ユーザー名
@@ -24,6 +25,9 @@ ja:
         image: 画像
         title: タイトル
         caption: 説明文
+        tag_name: タグ
+      spot:
+        address: スポット
       like:
         user_id: ユーザーID
       tag_map:
