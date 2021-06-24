@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @likes_count = Like.where(post_id: @post.id).count
     # 投稿内容のスポットの値がnilでなければ、投稿詳細画面に地図を表示する
-    if @post.spot != nil
+    if !@post.spot.nil?
       @lat = @post.spot.latitude
       @lng = @post.spot.longitude
       # 定義した@latと@lngの変数をJavaScriptでも扱えるように、それぞれgon.latとgon.lngに代入
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
       gon.lng = @lng
     end
     # 投稿内容のタグの値がnilでなければ、投稿詳細画面にタグを表示する
-    if @post.tags != nil
+    if !@post.tags.nil?
       @post_tags = @post.tags
     end
   end

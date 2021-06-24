@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true
   validates :introduction, length: { maximum: 50 }
 
-  #ゲストユーザー用のアカウント作成
+  # ゲストユーザー用のアカウント作成
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.alphanumeric(6)

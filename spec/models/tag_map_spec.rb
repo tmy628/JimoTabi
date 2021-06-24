@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'TagMapモデルのテスト', type: :model do
   describe 'バリデーションのテスト' do
-
     let!(:user) { create(:user) }
     let!(:tag) { create(:tag) }
     let!(:post) { create(:post, user_id: user.id) }
