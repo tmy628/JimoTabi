@@ -1,11 +1,16 @@
 <% if obj.errors.any? %>
   <div id="error_explanation">
-    <h3><%= "#{obj.errors.count}件のエラーがあります。ご確認ください。" %></h3>
     <ul>
       <% obj.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <li><%= message %></li>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
       <% end %>
     </ul>
   </div>
 <% end %>
 <!--エラーメッセージが特定のActive Recordオブジェクトに関連付けられている場合のみ使用可能-->
+
