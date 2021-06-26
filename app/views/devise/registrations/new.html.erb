@@ -28,14 +28,16 @@
     </div>
 
     <div class="actions">
-      <%= f.submit t('.sign_up'), class: "btn btn-success btn-block" %>
+      <%= f.button :type => "submit", class: "btn btn-success btn-lg btn-block" do %>
+        <i class="fas fa-user-plus"></i> <%= t('.sign_up') %></i>
+      <% end %>
     </div>
     <% end %>
 
     <hr class="border-dark">
 
     <div>
-      <%= link_to "アカウントをお持ちの方", new_session_path(resource_name), class: 'btn btn-info btn-block' %>
+      <%= link_to " アカウントをお持ちの方", new_session_path(resource_name), class: 'btn btn-info btn-lg btn-block far fa-user-circle' %>
     </div>
   </div>
 </div>
