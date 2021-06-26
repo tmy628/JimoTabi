@@ -49,6 +49,8 @@
   </div>
 <% else %>
   <div class="actions">
-    <%= f.submit "投稿する", class: "btn btn-success btn-block" %>
+    <%= f.button :type => "submit", class: "btn btn-success btn-lg btn-block" do %>
+      <i class="fas fa-pen-fancy"> 投稿する</i>
+    <% end %>
   </div>
 <% end %>
