@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :ensure_correct_user, only: [:edit, :update]
+  before_action :ensure_normal_user, only: %i[edit update]
 
   def show
     @user = User.find(params[:id])
@@ -27,6 +28,12 @@ class UsersController < ApplicationController
     @likes = @user.likes.includes(post: :user).page(params[:page]).reverse_order
     # どのユーザーがどの投稿をお気に入りしているか
     @tag_list = Tag.all
+  end
+
+  def ensure_normal_user
+    if current_user.email == 'guest@example.com'
+      redirect_back(fallback_location: root_path)
+    end
   end
 
   private
