@@ -7,7 +7,7 @@
           <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle" %>
         </p>
         <p class="vertical-middle">
-          <%= link_to post_path(@post.id), class: "show-link" do %>
+          <%= link_to user_path(@post.user), class: "show-link" do %>
             <%= @post.user.name %>
            <% end %>
         </p>
