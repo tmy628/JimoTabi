@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   def ensure_normal_user
     if current_user.email == 'guest@example.com'
-      redirect_back(fallback_location: root_path)
+      redirect_to root_path
     end
   end
 
