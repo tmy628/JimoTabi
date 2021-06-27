@@ -16,6 +16,7 @@ class User < ApplicationRecord
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.alphanumeric(6)
       user.name = "ゲスト"
+      user.introduction = 'ようこそ「じもたび」へ。ゲストユーザーは、ユーザー情報の編集・削除機能を制限しております。'
     end
   end
 end
