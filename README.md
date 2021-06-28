@@ -27,8 +27,8 @@
 
 [詳細設計書](https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing)  
 
-## :memo:機能一覧
-[機能一覧](https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing)
+## :memo:チャレンジ要素一覧
+[チャレンジ要素一覧](https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing)
 
 ## :memo:開発環境
 - OS：Linux(CentOS)
