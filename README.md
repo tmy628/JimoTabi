@@ -2,7 +2,7 @@
 
 <img width="1440" alt="jt_top" src="https://user-images.githubusercontent.com/78731929/123567263-aed72d80-d7fc-11eb-8936-f81aeb4126ed.png">
 
-![jt_demo](https://user-images.githubusercontent.com/78731929/123566572-f2309c80-d7fa-11eb-815d-8fe3b8ed6521.gif)
+![jt_demo](https://user-images.githubusercontent.com/78731929/123581063-13eb4d00-d816-11eb-9cc0-064954ff0144.gif)
 
 ## :black_nib:サイト概要
 絶景スポットや知られざる穴場スポット、おすすめのご当地料理や名産品、伝統文化や工芸品など  
@@ -45,6 +45,8 @@
 - IDE：Cloud9
 
 ## :open_file_folder:使用素材
-[フリー素材ブログ](https://www.shoshinsha-design.com/)  
+[フリー素材ブログ](https://www.shoshinsha-design.com/) 
+
 [ぱくたそ](https://www.pakutaso.com/)  
+
 [photoAC](https://www.photo-ac.com/)
