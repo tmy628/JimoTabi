@@ -1,4 +1,9 @@
 # :handbag:じもたび:handbag:
+
+<img width="1440" alt="jt_top" src="https://user-images.githubusercontent.com/78731929/123567263-aed72d80-d7fc-11eb-8936-f81aeb4126ed.png">
+
+![jt_demo](https://user-images.githubusercontent.com/78731929/123581063-13eb4d00-d816-11eb-9cc0-064954ff0144.gif)
+
 ## :black_nib:サイト概要
 絶景スポットや知られざる穴場スポット、おすすめのご当地料理や名産品、伝統文化や工芸品など  
 身近にあるけれどまだ知られていない地元地域に関するあらゆる情報を共有できるサービス  
@@ -27,8 +32,10 @@
 
 [詳細設計書](https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing)  
 
-## :memo:機能一覧
-[機能一覧](https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing)
+[ER図](https://drive.google.com/file/d/1tZh4HRx65gmpRIa9W8cx6RMiD9tL5HVu/view?usp=sharing)
+
+## :memo:チャレンジ要素一覧
+[チャレンジ要素一覧](https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing)
 
 ## :memo:開発環境
 - OS：Linux(CentOS)
@@ -38,6 +45,8 @@
 - IDE：Cloud9
 
 ## :open_file_folder:使用素材
-[フリー素材ブログ](https://www.shoshinsha-design.com/)  
+[フリー素材ブログ](https://www.shoshinsha-design.com/) 
+
 [ぱくたそ](https://www.pakutaso.com/)  
+
 [photoAC](https://www.photo-ac.com/)
