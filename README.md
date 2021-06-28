@@ -1,4 +1,7 @@
 # :handbag:じもたび:handbag:
+
+<img width="1440" alt="jt_top" src="https://user-images.githubusercontent.com/78731929/123567263-aed72d80-d7fc-11eb-8936-f81aeb4126ed.png">
+
 ## :black_nib:サイト概要
 絶景スポットや知られざる穴場スポット、おすすめのご当地料理や名産品、伝統文化や工芸品など  
 身近にあるけれどまだ知られていない地元地域に関するあらゆる情報を共有できるサービス  
