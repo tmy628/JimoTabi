@@ -19,7 +19,7 @@
   </div>
   <%= attachment_image_tag @post, :image, width: "100%", height:"auto", format: "jpeg", fallback: "no_image.jpg" %>
   <div class="card-body">
-    <p class="card-text"><%= @post.caption %></p>
+    <p class="card-text"><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
     <% if @post.tags != nil %>
       <% @post_tags.each do |tag| %>
           <p class="card-text tag">
