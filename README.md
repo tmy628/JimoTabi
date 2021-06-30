@@ -50,6 +50,7 @@
   * お気に入り投稿一覧表示
 * ページング機能（kaminari）
 * 投稿の検索機能
+* 自動デプロイ（GitHub Actions）
 
 ## :pencil:テスト
 * RSpec
