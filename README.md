@@ -28,25 +28,47 @@
 * 地元の魅力をもっと知りたい時  
 
 ## :page_facing_up:設計書
-[テーブル定義書](https://docs.google.com/spreadsheets/d/1VM6QD9EQiTuTyAFOofIaC3fqfjNhObXaFDNfPOC31io/edit?usp=sharing)  
+* [テーブル定義書](https://docs.google.com/spreadsheets/d/1VM6QD9EQiTuTyAFOofIaC3fqfjNhObXaFDNfPOC31io/edit?usp=sharing)
 
-[詳細設計書](https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing)  
+* [詳細設計書](https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing)
 
-[ER図](https://drive.google.com/file/d/1tZh4HRx65gmpRIa9W8cx6RMiD9tL5HVu/view?usp=sharing)
+* [ER図](https://drive.google.com/file/d/1tZh4HRx65gmpRIa9W8cx6RMiD9tL5HVu/view?usp=sharing)
+
+## :clipboard:機能一覧
+* ユーザー認証（devise）
+  * 日本語化
+  * ゲストログイン
+* 投稿機能
+  * 画像投稿（refile）
+* タグ機能
+  * タグ付け
+  * タグ絞り込み
+* 地図機能（Google Maps API）
+  * Google Maps をウェブサイトに表示（Maps JavaScript API）
+  * 住所を緯度・経度（または緯度経度を住所）に変換（Geocoding API）
+* お気に入り機能（Ajax）
+  * お気に入り投稿一覧表示
+* ページング機能（kaminari）
+* 投稿の検索機能
+* 自動デプロイ（GitHub Actions）
+
+## :pencil:テスト
+* RSpec
+  * 単体テスト（Model）
 
 ## :memo:チャレンジ要素一覧
 [チャレンジ要素一覧](https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing)
 
-## :memo:開発環境
+## :computer:開発環境
 - OS：Linux(CentOS)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
 - フレームワーク：Ruby on Rails
-- ライブラリ：jQuery,bootstrap,FontAwesome6
+- ライブラリ：jQuery
 - IDE：Cloud9
 
 ## :open_file_folder:使用素材
-[フリー素材ブログ](https://www.shoshinsha-design.com/) 
+* [フリー素材ブログ](https://www.shoshinsha-design.com/) 
 
-[ぱくたそ](https://www.pakutaso.com/)  
+* [ぱくたそ](https://www.pakutaso.com/)  
 
-[photoAC](https://www.photo-ac.com/)
+* [photoAC](https://www.photo-ac.com/)
