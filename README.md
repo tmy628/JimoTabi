@@ -28,11 +28,11 @@
 * 地元の魅力をもっと知りたい時  
 
 ## :page_facing_up:設計書
-[テーブル定義書](https://docs.google.com/spreadsheets/d/1VM6QD9EQiTuTyAFOofIaC3fqfjNhObXaFDNfPOC31io/edit?usp=sharing)  
+* [テーブル定義書](https://docs.google.com/spreadsheets/d/1VM6QD9EQiTuTyAFOofIaC3fqfjNhObXaFDNfPOC31io/edit?usp=sharing)  
 
-[詳細設計書](https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing)  
+* [詳細設計書](https://docs.google.com/spreadsheets/d/1rCL9-8wE-GLDfJ0CcCVcn4DBeaqopzvbOcJGxBY1QvY/edit?usp=sharing)  
 
-[ER図](https://drive.google.com/file/d/1tZh4HRx65gmpRIa9W8cx6RMiD9tL5HVu/view?usp=sharing)
+* [ER図](https://drive.google.com/file/d/1tZh4HRx65gmpRIa9W8cx6RMiD9tL5HVu/view?usp=sharing)
 
 ## :memo:チャレンジ要素一覧
 [チャレンジ要素一覧](https://docs.google.com/spreadsheets/d/1bqjuwU3awUpVLLA4hL59Zucu-KbCZacArA0iaqQYe4Q/edit?usp=sharing)
@@ -45,8 +45,8 @@
 - IDE：Cloud9
 
 ## :open_file_folder:使用素材
-[フリー素材ブログ](https://www.shoshinsha-design.com/) 
+* [フリー素材ブログ](https://www.shoshinsha-design.com/) 
 
-[ぱくたそ](https://www.pakutaso.com/)  
+* [ぱくたそ](https://www.pakutaso.com/)  
 
-[photoAC](https://www.photo-ac.com/)
+* [photoAC](https://www.photo-ac.com/)
