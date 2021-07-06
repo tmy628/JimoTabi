@@ -2,21 +2,14 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @like = current_user.likes.build(like_params)
-    # 親モデル(User)に属する子モデル(Like)のインスタンスを新たに生成するのでbuildを使う
-    @post = @like.post
-    @like.save
+    @post = Post.find(params[:post_id])
+    like = @post.likes.new(user_id: current_user.id)
+    like.save
   end
 
   def destroy
-    @like = Like.find(params[:id])
-    @post = @like.post
-    @like.destroy
-  end
-
-  private
-
-  def like_params
-    params.permit(:post_id)
+    @post = Post.find(params[:post_id])
+    like = @post.posts.find_by(user_id: current_user.id)
+    like.destroy
   end
 end
