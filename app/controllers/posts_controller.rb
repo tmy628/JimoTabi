@@ -30,7 +30,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @likes_count = Like.where(post_id: @post.id).count
+    @comment = Comment.new
+    # コメントを新着順で表示
+    @comments = @post.comments.order(created_at: :desc)
     # 投稿内容のスポットの値がnilでなければ、投稿詳細画面に地図を表示する
     if !@post.spot.nil?
       @lat = @post.spot.latitude
