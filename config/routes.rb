@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # お気に入り情報を保存・削除するアクションへのルーティング
   resources :posts do
     resources :likes, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy]
   end
 
   # お気に入り一覧ページを表示するアクションへのルーティング
