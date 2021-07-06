@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-sm-12">
         <p class="vertical-middle">
-          <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle" %>
+          <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle", size: "50x50" %>
         </p>
         <p class="vertical-middle">
           <%= link_to user_path(@post.user), class: "show-link" do %>
@@ -34,26 +34,35 @@
       <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
     </p>
 
-    <div class="row">
-      <ul>
-        <li class="comment-create">
-          <h3 class="text-left title">コメント</h3>
-        </li>
-        <li class="comments_area">
-          <%= render 'comments/index', comments: @comments %>
-        </li>
-      </ul>
-      <hr class="border-dark">
-      <% if current_user != @post.user %>
-        <div class="comment-create">
-          <h3 class="text-left">コメントを投稿する</h3>
-          <%= rebder 'comments/form', comment: @comment, post: @post %>
-        </div>
-      <% end %>
+    <div id="post_<%= @post.id %>">
+      <div class="like-btn">
+        <%= render 'likes/like', post: @post %>
+      </div>
+      <div class="comments-count">
+        <%= comments.count %>件のコメント
+      </div>
     </div>
 
-    <div class="like" id="likes_buttons_<%= @post.id %>">
-       <%= render 'likes/like', post: @post %>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body comments_area">
+        <%= render 'comments/index', comments: @comments %>
+      </div>
+    </div>
+
+    <hr class="border-dark">
+
+    <div class="comment-create">
+      <p class="card-text">コメントを追加...</p>
+      <%= form_with model: [@post, @comment] do |f| %>
+        <div class="form-group">
+          <%= f.text_area :content, class: "form-label" %>
+        </div>
+        <div class="actions">
+          <%= f.button :type => "submit", class: "btn btn-outline-dark btn-lg btn-block" do %>
+            <i class="fas fa-comments"> 送信</i>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
     <% if @post.user == current_user %>
