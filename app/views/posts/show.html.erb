@@ -55,11 +55,11 @@
       <p class="card-text">コメントを追加...</p>
       <%= form_with model: [@post, @comment] do |f| %>
         <div class="form-group">
-          <%= f.text_area :content, class: "form-label" %>
+          <%= f.text_area :content, class: "form-control" %>
         </div>
         <div class="actions">
           <%= f.button :type => "submit", class: "btn btn-outline-dark btn-lg btn-block" do %>
-            <i class="fas fa-comments"> 送信</i>
+            <i class="fas fa-comments"> コメントを投稿する</i>
           <% end %>
         </div>
       <% end %>
