@@ -20,8 +20,9 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :caption, presence: true, length: { maximum: 200 }
 
-  def liked_by(user)
-    Like.find_by(user_id: user.id, post_id: id)
+  def liked_by?(user)
+    favorites.where(user_id: user.id).exists?
+    # ユーザidがLikesテーブル内に存在（exists?）するかどうかを調べる
   end
 
   def save_tag(sent_tags)
