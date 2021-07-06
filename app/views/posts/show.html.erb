@@ -34,6 +34,26 @@
       <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
     </p>
 
+    <div class="row">
+      <ul>
+        <li class="comment-create">
+          <h3 class="text-left title">コメント</h3>
+        </li>
+        <li class="comments_area">
+          <!--<%#= render 'comments/index', comments: @comments %>-->
+          <!--コメント一覧のビューは部分テンプレートで作成-->
+        </li>
+      </ul>
+      <hr class="border-dark">
+      <% if current_user != @post.user %>
+        <div class="comment-create">
+          <h3 class="text-left">コメントを投稿する</h3>
+          <!--<%#= rebder 'comments/form', comment: @comment, post: @post %>-->
+          <!--コメント入力フォームのビューは部分テンプレートで作成-->
+        </div>
+      <% end %>
+    </div>
+
     <div class="like" id="likes_buttons_<%= @post.id %>">
        <%= render 'likes/like', post: @post %>
     </div>
