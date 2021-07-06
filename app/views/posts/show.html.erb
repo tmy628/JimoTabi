@@ -40,16 +40,14 @@
           <h3 class="text-left title">コメント</h3>
         </li>
         <li class="comments_area">
-          <!--<%#= render 'comments/index', comments: @comments %>-->
-          <!--コメント一覧のビューは部分テンプレートで作成-->
+          <%= render 'comments/index', comments: @comments %>
         </li>
       </ul>
       <hr class="border-dark">
       <% if current_user != @post.user %>
         <div class="comment-create">
           <h3 class="text-left">コメントを投稿する</h3>
-          <!--<%#= rebder 'comments/form', comment: @comment, post: @post %>-->
-          <!--コメント入力フォームのビューは部分テンプレートで作成-->
+          <%= rebder 'comments/form', comment: @comment, post: @post %>
         </div>
       <% end %>
     </div>
