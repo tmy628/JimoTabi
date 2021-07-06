@@ -21,7 +21,7 @@ class Post < ApplicationRecord
   validates :caption, presence: true, length: { maximum: 200 }
 
   def liked_by?(user)
-    favorites.where(user_id: user.id).exists?
+    likes.where(user_id: user.id).exists?
     # ユーザidがLikesテーブル内に存在（exists?）するかどうかを調べる
   end
 
