@@ -38,23 +38,21 @@
       <%= render 'likes/like', post: @post %>
     </div>
 
-      <!--<div class="comments_count">-->
-      <!--  <%#= render 'comments/count', post: @post %>-->
-      <!--</div>-->
-
-    <div class="collapse" id="collapseExample">
-      <div class="card card-body comments_area">
-        <%= render 'comments/index', post: @post %>
-      </div>
-    </div>
-
     <hr class="border-dark">
 
+    <div id="comments_count_<%= @post.id %>">
+      <%= render 'comments/count', post: @post %>
+    </div>
+
+
+    <div id="comments_area_<%= @post.id %>">
+      <%= render 'comments/index', post: @post %>
+    </div>
+
     <div class="comment-create">
-      <p class="card-text">コメントを追加...</p>
       <%= form_with model: [@post, @comment] do |f| %>
         <div class="form-group">
-          <%= f.text_area :content, class: "form-control" %>
+          <%= f.text_area :content, placeholder: "コメントを追加...", class: "form-control" %>
         </div>
         <div class="actions">
           <%= f.button :type => "submit", class: "btn btn-outline-dark btn-lg btn-block" do %>
