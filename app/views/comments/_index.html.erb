@@ -1,5 +1,6 @@
 <div class="collapse" id="collapseExample">
   <% post.comments.each do |comment| %>
+    <% comment_user = comment.user %>
     <div class="card my-2">
       <div class="card-body">
         <p class="vertical-middle">
