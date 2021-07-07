@@ -10,6 +10,7 @@ class Post < ApplicationRecord
   has_many :tag_maps, dependent: :destroy
   has_many :tags, through: :tag_maps
   has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   attachment :image
 
@@ -19,8 +20,9 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :caption, presence: true, length: { maximum: 200 }
 
-  def liked_by(user)
-    Like.find_by(user_id: user.id, post_id: id)
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+    # ユーザidがLikesテーブル内に存在（exists?）するかどうかを調べる
   end
 
   def save_tag(sent_tags)
