@@ -67,5 +67,11 @@ RSpec.describe 'Postモデルのテスト', type: :model do
         expect(Post.reflect_on_association(:likes).macro).to eq :has_many
       end
     end
+
+    context 'Commentモデルとの関係' do
+      it '1:Nとなっている' do
+        expect(Post.reflect_on_association(:comments).macro).to eq :has_many
+      end
+    end
   end
 end
