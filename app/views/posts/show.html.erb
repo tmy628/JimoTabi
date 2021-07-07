@@ -24,7 +24,7 @@
       <% @post_tags.each do |tag| %>
           <p class="card-text tag">
             <i class="fas fa-hashtag"></i>
-            <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id), class: "tag_link"%>
+            <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id), class: "tag_link" %>
           </p>
       <% end %>
     <% end %>
