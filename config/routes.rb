@@ -6,9 +6,10 @@ Rails.application.routes.draw do
 
   root to: 'homes#top'
 
-  # お気に入り情報を保存・削除するアクションへのルーティング
+  # お気に入り・コメント情報を保存・削除するアクションへのルーティング
   resources :posts do
-    resources :likes, only: [:create, :destroy]
+    resource :likes, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy]
   end
 
   # お気に入り一覧ページを表示するアクションへのルーティング

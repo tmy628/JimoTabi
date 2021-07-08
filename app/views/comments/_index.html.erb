@@ -1,0 +1,28 @@
+<div class="collapse" id="collapseExample">
+  <% post.comments.includes([:user]).each do |comment| %>
+    <% comment_user = comment.user %>
+    <div class="card my-2">
+      <div class="card-body">
+        <p class="vertical-middle">
+          <%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg", class: "rounded-circle", size: "50x50" %>
+        </p>
+        <p class="vertical-middle">
+          <%= link_to user_path(comment_user), class: "user_#{comment_user.id} user_link" do %>
+            <%= comment_user.name %>
+           <% end %>
+        </p>
+        <p class="vertical-middle">
+          <%= comment.content %>
+          <% if comment.user == current_user %>
+            <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true do %>
+              <i class="fas fa-trash" style="color: black;"></i>
+            <% end %>
+          <% end %>
+        </p><br>
+        <span class="comment-date pull-right">
+          <%= comment.created_at.strftime('%Y年%-m月%-d日 %H時%M分%S秒') %>
+        </span>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-sm-12">
         <p class="vertical-middle">
-          <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle" %>
+          <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle", size: "50x50" %>
         </p>
         <p class="vertical-middle">
           <%= link_to user_path(@post.user), class: "show-link" do %>
@@ -24,7 +24,7 @@
       <% @post_tags.each do |tag| %>
           <p class="card-text tag">
             <i class="fas fa-hashtag"></i>
-            <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id), class: "tag_link"%>
+            <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id), class: "tag_link" %>
           </p>
       <% end %>
     <% end %>
@@ -34,8 +34,32 @@
       <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
     </p>
 
-    <div class="like" id="likes_buttons_<%= @post.id %>">
-       <%= render 'likes/like', post: @post %>
+    <div id="likes_buttons_<%= @post.id %>">
+      <%= render 'likes/like', post: @post %>
+    </div>
+
+    <hr class="border-dark">
+
+    <div id="comments_count_<%= @post.id %>">
+      <%= render 'comments/count', post: @post %>
+    </div>
+
+
+    <div id="comments_area_<%= @post.id %>">
+      <%= render 'comments/index', post: @post %>
+    </div>
+
+    <div class="comment-create">
+      <%= form_with model: [@post, @comment] do |f| %>
+        <div class="form-group">
+          <%= f.text_area :content, placeholder: "コメントを追加...", class: "form-control" %>
+        </div>
+        <div class="actions">
+          <%= f.button :type => "submit", class: "btn btn-outline-dark btn-lg btn-block" do %>
+            <i class="fas fa-comments"> コメントを投稿する</i>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
     <% if @post.user == current_user %>
