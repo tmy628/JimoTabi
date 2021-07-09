@@ -12,7 +12,7 @@
            <% end %>
         </p>
         <p class="vertical-middle">
-          &nbsp|&nbsp更新日：<%= @post.created_at.strftime('%Y年%-m月%-d日')%>
+          更新日：<%= @post.created_at.strftime('%Y年%-m月%-d日') %>
         </p>
       </div>
     </div>
@@ -63,6 +63,7 @@
     </div>
 
     <% if @post.user == current_user %>
+      <hr class="border-dark">
       <div data-turbolinks="false">
         <%= link_to " 編集する", edit_post_path(@post), class: "btn btn-success btn-lg btn-block fas fa-edit" %>
       </div>
