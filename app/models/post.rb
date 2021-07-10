@@ -19,6 +19,7 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
   validates :caption, presence: true, length: { maximum: 200 }
+  validates :prefecture_code, presence: true
 
   def liked_by?(user)
     likes.where(user_id: user.id).exists?
