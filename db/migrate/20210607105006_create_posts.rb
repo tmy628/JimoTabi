@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
     create_table :posts do |t|
       t.string :title, null: false
       t.text :caption, null: false
+      t.integer :prefecture_code, null: false
       t.string :image_id
       t.references :user, foreign_key: true, null: false
 

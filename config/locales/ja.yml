@@ -25,9 +25,10 @@ ja:
         image: 画像
         title: タイトル
         caption: 説明文
+        prefecture_code: 都道府県
         tag_name: タグ
       spot:
-        address: スポット
+        address: 住所
       like:
         user_id: ユーザーID
       tag_map:

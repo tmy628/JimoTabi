@@ -22,7 +22,7 @@
     <%= f.label :tag_name, class: "form-label" %><br>
     <%= "カンマ（,）で区切ることで複数のタグを付けることができます。" %><br>
     <%= "例：お土産,グルメ,穴場スポット" %>
-    <%= f.text_field :tag_name, value: @tag_list, placeholder: "付けたいタグの名前を入力", class: "form-control" %>
+    <%= f.text_field :tag_name, value: @tag_list, placeholder: "付けたいタグの名前", class: "form-control" %>
   </div>
 <% else %>
   <div class="form-group">
@@ -34,9 +34,14 @@
 <% end %>
 
 <div class="form-group">
+  <%= f.label :prefecture_code, class: "form-label" %><%= "【必須】" %>
+  <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, { prompt: "選択してください" }, class: "form-control" %>
+</div>
+
+<div class="form-group">
   <%= f.fields_for :spot do |s| %>
-    <%= s.label :address, "場所(Google Mapで検索)", class: "spot_title" %><%= "【必須】" %>
-    <%= s.text_field :address, placeholder: "住所やスポット名", id: "address", class: "spot_text" %>
+    <%= s.label :address, "住所(Google Mapで検索)", class: "spot_title" %><%= "【必須】" %>
+    <%= s.text_field :address, placeholder: "住所", id: "address", class: "spot_text" %>
   <% end %>
   <input type="button" onclick="codeAddress()" value="検索する">
   <div class="map" id="map" style="height: 320px; width: 100%;"></div>

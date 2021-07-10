@@ -22,7 +22,7 @@
       <div class="search-result-number">
         <%= "1-#{@posts.count}件表示" %>
       </div>
-      <%= render 'posts/index', posts: @posts%>
+      <%= render 'posts/index', posts: @posts %>
       <div class="row">
         <div class="mx-auto">
           <p class="d-flex align-items-center"><%= paginate @posts %></p>

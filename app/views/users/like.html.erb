@@ -39,10 +39,18 @@
                     </div>
                     <div class="user-info">
                       <div class="col-sm-12">
-                        <p class="card-text"><%= like.post.caption.truncate(24) %></p>
+                        <p class="card-text">
+                          <%= like.post.caption.truncate(24) %>
+                        </p>
                       </div>
                       <div class="col-sm-12">
-                        <p>
+                        <p class="card-text">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <%= like.post.prefecture_name %>
+                        </p>
+                      </div>
+                      <div class="col-sm-12">
+                        <p class="card-text">
                           <%= like.post.created_at.strftime('%Y年%-m月%-d日')%>
                           &nbsp|&nbsp
                           <%= link_to user_path(like.post.user), class: "link" do %>

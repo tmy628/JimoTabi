@@ -18,7 +18,15 @@
             </div>
             <div class="user-info">
               <div class="col-sm-12">
-                <p class="card-text"><%= post.caption.truncate(24) %></p>
+                <p class="card-text">
+                  <%= post.caption.truncate(24) %>
+                </p>
+              </div>
+              <div class="col-sm-12">
+                <p class="card-text">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <%= post.prefecture_name %>
+                </p>
               </div>
               <div class="col-sm-12">
                 <p class="card-text">
