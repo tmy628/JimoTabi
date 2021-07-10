@@ -29,9 +29,13 @@
       <% end %>
     <% end %>
 
-    <p class="card-text"><%= @post.prefecture_name %></p>
+    <p class="card-text">
+      <i class="fas fa-map-marker-alt"></i>
+      <%= @post.prefecture_name %>
+    </p>
 
     <p class="card-text">
+      <i class="fas fa-map-marked-alt"></i>
       <%= @post.spot.address %>
       <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
     </p>
