@@ -7,7 +7,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.page(params[:page]).reverse_order
     # ユーザーに関連づけられた投稿のみ、@postsに渡す
-    @tag_list = Tag.all
   end
 
   def edit
@@ -27,7 +26,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @likes = @user.likes.includes(post: :user).page(params[:page]).reverse_order
     # どのユーザーがどの投稿をお気に入りしているか
-    @tag_list = Tag.all
   end
 
   def ensure_normal_user

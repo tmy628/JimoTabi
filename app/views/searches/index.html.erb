@@ -2,9 +2,6 @@
   <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-3">
       <div>
-        <%= render 'users/info', user: current_user %>
-      </div>
-      <div>
         <%= render 'posts/tag_list', tag_list: @tag_list %>
       </div>
     </div>
@@ -22,7 +19,7 @@
       <div class="search-result-number">
         <%= "1-#{@posts.count}件表示" %>
       </div>
-      <%= render 'posts/index', posts: @posts%>
+      <%= render 'posts/index', posts: @posts %>
       <div class="row">
         <div class="mx-auto">
           <p class="d-flex align-items-center"><%= paginate @posts %></p>

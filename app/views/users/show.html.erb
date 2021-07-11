@@ -4,9 +4,6 @@
       <div>
         <%= render 'info', user: @user %>
       </div>
-      <div>
-        <%= render 'posts/tag_list', tag_list: @tag_list %>
-      </div>
     </div>
     <div class="col-12 col-sm-12 col-md-12 col-lg-8 offset-lg-1">
       <div class="row">
@@ -24,7 +21,7 @@
           </div>
         </div>
       <% else %>
-        <%= render 'posts/index', posts: @posts%>
+        <%= render 'posts/index', posts: @posts %>
       <% end %>
       <div class="row">
         <div class="mx-auto">
