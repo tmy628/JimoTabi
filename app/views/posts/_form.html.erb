@@ -34,8 +34,8 @@
 <% end %>
 
 <div class="form-group">
-  <%= f.label :prefecture_code, class: "form-label" %><%= "【必須】" %>
-  <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name, { prompt: "選択してください" }, class: "form-control" %>
+  <%= f.label :prefecture_name, class: "form-label" %><%= "【必須】" %>
+  <%= f.collection_select :prefecture_name, JpPrefecture::Prefecture.all, :name, :name, { prompt: "選択してください" }, class: "form-control" %>
 </div>
 
 <div class="form-group">

@@ -78,7 +78,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :image, :caption, :prefecture_code, spot_attributes: [:address])
+    params.require(:post).permit(:title, :image, :caption, :prefecture_name, spot_attributes: [:address])
   end
 
   # ログインユーザーでなければ投稿の編集・削除ができないように権限を設定する
