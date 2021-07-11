@@ -19,7 +19,7 @@ class Post < ApplicationRecord
 
   validates :title, presence: true
   validates :caption, presence: true, length: { maximum: 200 }
-  validates :prefecture_code, presence: true
+  validates :prefecture_name, presence: true
 
   def liked_by?(user)
     likes.where(user_id: user.id).exists?
@@ -46,19 +46,8 @@ class Post < ApplicationRecord
 
   def self.search(search)
     return Post.all unless search
-    Post.where(['title LIKE ? OR caption LIKE ? ', "%#{search}%", "%#{search}%"])
+    Post.where(['title LIKE ? OR caption LIKE ? OR prefecture_name LIKE ? ', "%#{search}%", "%#{search}%", "%#{search}%"])
   end
 
   include JpPrefecture
-  jp_prefecture :prefecture_code
-  # 都道府県コードから都道府県名に自動で変換する
-
-  def prefecture_name
-    JpPrefecture::Prefecture.find(code: prefecture_code).try(:name)
-  end
-
-  def prefecture_name=(prefecture_name)
-    self.prefecture_code = JpPrefecture::Prefecture.find(name: prefecture_name).code
-  end
-  # ~.prefecture_nameで都道府県名を参照可能にする。
 end
