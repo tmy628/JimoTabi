@@ -1,6 +1,6 @@
 # :handbag:じもたび:handbag:
 
-<img width="1440" alt="jt_top" src="https://user-images.githubusercontent.com/78731929/123567263-aed72d80-d7fc-11eb-8936-f81aeb4126ed.png">
+<img width="1440" alt="ji_top_pic" src="https://user-images.githubusercontent.com/78731929/125216374-fc719100-e2f8-11eb-87d6-e6aa5e2c45a8.png">
 
 ![jt_demo](https://user-images.githubusercontent.com/78731929/123581063-13eb4d00-d816-11eb-9cc0-064954ff0144.gif)
 
