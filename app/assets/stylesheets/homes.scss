@@ -2,66 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html {
-  scroll-behavior: smooth;
+// html {
+//   scroll-behavior: smooth;
 
-}
+// }
 
 .top {
   width: 100%;
-  height: auto;
-  text-align: center;
+  height: 100vh;
   background-image: image-url("top_image.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.top-content {
+.top-visual {
   width: 100%;
-  height: auto;
-  background-color: rgba( 0, 0, 0, 0.5);
+  height: 100vh;
+  background-color: rgba( 0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_content {
+  text-align: center;
 }
 
 .top-title {
-  padding-top: 50px;
   font-size: 170px;
   color: #fff
 }
 
 .top-theme {
-  padding-top: 10px;
   font-size: 40px;
+  margin: 0;
   color: #fff
 }
 
-.about {
-  width: 100%;
-  height: auto;
-  padding: 1em;
-}
+// .about {
+//   width: 100%;
+//   height: auto;
+//   padding: 1em;
+// }
 
-.head{
-  text-align: center;
-  padding: 15px 0;
-}
+// .head{
+//   text-align: center;
+//   padding: 15px 0;
+// }
 
-.about-head {
-  font-size: 40px;
-  background: linear-gradient(transparent 50%, #ff9999 0%); // ラインマーカー
-}
+// .about-head {
+//   font-size: 40px;
+//   background: linear-gradient(transparent 50%, #ff9999 0%); // ラインマーカー
+// }
 
-.about-body {
-  margin-top: 30px;
-  line-height: 3;
-  font-size: 20px;
-  text-align: center;
-}
-
-.guest {
-  padding: 2em 0em 4em;
-  text-align: center;
-}
-
+// .about-body {
+//   margin-top: 30px;
+//   line-height: 3;
+//   font-size: 20px;
+//   text-align: center;
+// }
 
 /* 画面幅が960px未満の時は */
 @media (max-width: 959px) {
@@ -77,15 +76,15 @@ html {
     font-size: 30px;
   }
 
-  .about-head {
-    font-size: 40px;
-  }
+  // .about-head {
+  //   font-size: 40px;
+  // }
 
-  .about-body {
-    margin-top: 25px;
-    line-height: 2;
-    text-align: left;
-  }
+  // .about-body {
+  //   margin-top: 25px;
+  //   line-height: 2;
+  //   text-align: left;
+  // }
 }
 
 /* 画面幅が520px未満の時は */
@@ -103,14 +102,14 @@ html {
     color: #fff
   }
 
-  .about-head {
-    font-size: 20px;
-  }
+  // .about-head {
+  //   font-size: 20px;
+  // }
 
-  .about-body {
-    margin-top: 20px;
-    line-height: 2;
-    font-size: 17px;
-    text-align: left;
-  }
+  // .about-body {
+  //   margin-top: 20px;
+  //   line-height: 2;
+  //   font-size: 17px;
+  //   text-align: left;
+  // }
 }
