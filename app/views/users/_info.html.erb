@@ -9,7 +9,7 @@
     <h4 class="font-weight-bold text-center"><%= user.name %></h4>
   </div>
   <div class="col-md-12 m-1">
-    <p><%=safe_join(user.introduction.split("\n"),tag(:br))%></p>
+    <p><%= user.introduction %></p>
   </div>
 </div>
 <div class="row">
