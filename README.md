@@ -2,8 +2,6 @@
 
 <img width="1440" alt="ji_top_pic" src="https://user-images.githubusercontent.com/78731929/125216374-fc719100-e2f8-11eb-87d6-e6aa5e2c45a8.png">
 
-![jt_demo](https://user-images.githubusercontent.com/78731929/123581063-13eb4d00-d816-11eb-9cc0-064954ff0144.gif)
-
 ## :black_nib:サイト概要
 絶景スポットや知られざる穴場スポット、おすすめのご当地料理や名産品、伝統文化や工芸品など  
 身近にあるけれどまだ知られていない地元地域に関するあらゆる情報を共有できるサービス  
