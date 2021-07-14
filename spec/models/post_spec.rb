@@ -7,13 +7,6 @@ RSpec.describe 'Postモデルのテスト', type: :model do
     let(:user) { create(:user) }
     let!(:post) { build(:post, user_id: user.id) }
 
-    context 'imageカラム' do
-      it '空欄でないこと' do
-        post.title = ''
-        is_expected.to eq false
-      end
-    end
-
     context 'titleカラム' do
       it '空欄でないこと' do
         post.title = ''
@@ -32,6 +25,13 @@ RSpec.describe 'Postモデルのテスト', type: :model do
       end
       it '200文字以下であること: 201文字は×' do
         post.caption = Faker::Lorem.characters(number: 201)
+        is_expected.to eq false
+      end
+    end
+
+    context 'prefecture_nameカラム' do
+      it '未選択でないこと' do
+        post.prefecture_name = ''
         is_expected.to eq false
       end
     end
