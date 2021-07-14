@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   }
 
   root to: 'homes#top'
+  get 'home/about', to: 'homes#about'
 
   # お気に入り・コメント情報を保存・削除するアクションへのルーティング
   resources :posts do

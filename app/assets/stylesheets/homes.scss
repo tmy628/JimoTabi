@@ -30,37 +30,54 @@
 
 .top-title {
   font-size: 170px;
-  color: #fff
+  color: #fff;
 }
 
 .top-theme {
   font-size: 40px;
   margin: 0;
-  color: #fff
+  color: #fff;
 }
 
-// .about {
-//   width: 100%;
-//   height: auto;
-//   padding: 1em;
-// }
+.about {
+  width: 100%;
+  height: 100vh;
+  background-image: image-url("about_image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-visual {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba( 0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_content {
+  padding: 0 30px;
+  text-align: center;
+}
 
 // .head{
-//   text-align: center;
-//   padding: 15px 0;
+//
 // }
 
-// .about-head {
-//   font-size: 40px;
-//   background: linear-gradient(transparent 50%, #ff9999 0%); // ラインマーカー
-// }
+.about-head {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(transparent 50%, #ff9999 0%); // ラインマーカー
+}
 
-// .about-body {
-//   margin-top: 30px;
-//   line-height: 3;
-//   font-size: 20px;
-//   text-align: center;
-// }
+.about-body {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 3;
+}
 
 /* 画面幅が960px未満の時は */
 @media (max-width: 959px) {
@@ -76,15 +93,15 @@
     font-size: 30px;
   }
 
-  // .about-head {
-  //   font-size: 40px;
-  // }
+  .about-head {
+    font-size: 40px;
+  }
 
-  // .about-body {
-  //   margin-top: 25px;
-  //   line-height: 2;
-  //   text-align: left;
-  // }
+  .about-body {
+    margin-top: 25px;
+    line-height: 2;
+    text-align: left;
+  }
 }
 
 /* 画面幅が520px未満の時は */
@@ -99,17 +116,17 @@
 
   .top-theme {
     font-size: 17px;
-    color: #fff
+    color: #fff;
   }
 
-  // .about-head {
-  //   font-size: 20px;
-  // }
+  .about-head {
+    font-size: 20px;
+  }
 
-  // .about-body {
-  //   margin-top: 20px;
-  //   line-height: 2;
-  //   font-size: 17px;
-  //   text-align: left;
-  // }
+  .about-body {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 17px;
+    text-align: left;
+  }
 }
