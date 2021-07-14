@@ -4,7 +4,7 @@
     <div class="card my-2">
       <div class="card-body">
         <p class="vertical-middle">
-          <%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50, fallback: "no_image.jpg", class: "rounded-circle", size: "50x50" %>
+          <%= attachment_image_tag comment.user, :profile_image, :fill, 50, 50, fallback: "no_image_user.jpeg", class: "rounded-circle", size: "50x50" %>
         </p>
         <p class="vertical-middle">
           <%= link_to user_path(comment_user), class: "user_#{comment_user.id} user_link" do %>
