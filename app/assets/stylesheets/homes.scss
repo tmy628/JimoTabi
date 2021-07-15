@@ -2,66 +2,71 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html {
-  scroll-behavior: smooth;
-
-}
-
 .top {
-  width: 100%;
-  height: auto;
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
   background-image: image-url("top_image.jpg");
   background-size: cover;
   background-position: center;
 }
 
-.top-content {
-  width: 100%;
-  height: auto;
-  background-color: rgba( 0, 0, 0, 0.5);
+.top-visual {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba( 0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_content {
+  text-align: center;
 }
 
 .top-title {
-  padding-top: 50px;
   font-size: 170px;
-  color: #fff
+  color: #fff;
 }
 
 .top-theme {
-  padding-top: 10px;
   font-size: 40px;
-  color: #fff
+  color: #fff;
 }
 
 .about {
-  width: 100%;
-  height: auto;
-  padding: 1em;
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url("about_image.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.head{
+.about-visual {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba( 0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_content {
   text-align: center;
-  padding: 15px 0;
+  margin: 0 30px;
 }
 
 .about-head {
   font-size: 40px;
-  background: linear-gradient(transparent 50%, #ff9999 0%); // ラインマーカー
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(transparent 75%, #ffadad 75%); // ラインマーカー
 }
 
 .about-body {
-  margin-top: 30px;
+  font-weight: bold;
+  color: #fff;
   line-height: 3;
-  font-size: 20px;
-  text-align: center;
 }
-
-.guest {
-  padding: 2em 0em 4em;
-  text-align: center;
-}
-
 
 /* 画面幅が960px未満の時は */
 @media (max-width: 959px) {
@@ -82,7 +87,6 @@ html {
   }
 
   .about-body {
-    margin-top: 25px;
     line-height: 2;
     text-align: left;
   }
@@ -100,7 +104,7 @@ html {
 
   .top-theme {
     font-size: 17px;
-    color: #fff
+    color: #fff;
   }
 
   .about-head {
@@ -108,9 +112,7 @@ html {
   }
 
   .about-body {
-    margin-top: 20px;
     line-height: 2;
-    font-size: 17px;
     text-align: left;
   }
 }
