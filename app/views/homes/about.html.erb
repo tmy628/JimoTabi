@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col px-0">
+      <div class="about">
+        <div class="about-visual">
+          <div class="about_content">
+            <span class="about-head">
+              「じもたび」とは？
+            </span>
+            <p class="about-body">
+              絶景スポットや知られざる穴場スポット、おすすめのご当地料理や名産品、伝統文化や工芸品...。
+              <br class="ps-br">
+              身近にあるけれどまだ知られていない地元地域に関するあらゆる情報を
+              <br class="ps-br">
+              写真を使って保存・共有・発信することができるサービスです。
+              <br class="ps-br">
+              まだ見たことのない、体験したことのない地元の魅力
+              <br class="ps-br">
+              「じもたび」で再発見しませんか。
+            </p>
+            <p>
+              <%= link_to ' 新規登録', new_user_registration_path, class: "fas fa-user-plus btn btn-success" %>
+            </p>
+            <p>
+              <%= link_to ' ゲストログイン', users_guest_sign_in_path, method: :post, class: "fas fa-sign-in-alt btn btn-light" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

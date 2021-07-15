@@ -14,12 +14,6 @@ class Post < ApplicationRecord
 
   attachment :image
 
-  # TagMapモデルのテスト時OFF
-  validates :image, presence: {
-    message: -> (rec, data) {
-      I18n.t('activerecord.errors.models.post.validates')
-    }
-  }
   validates :title, presence: true
   validates :caption, presence: true, length: { maximum: 200 }
   validates :prefecture_name, presence: {

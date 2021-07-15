@@ -1,82 +1,86 @@
-<div class="card col-md-6 mx-auto my-5 p-3">
-  <div class="card-body">
-    <h1 class="card-title font-weight-bold"><%= @post.title %></h1>
-    <div class="row">
-      <div class="col-sm-12">
-        <p class="vertical-middle">
-          <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg", class: "rounded-circle", size: "50x50" %>
-        </p>
-        <p class="vertical-middle">
-          <%= link_to user_path(@post.user), class: "show-link" do %>
-            <%= @post.user.name %>
-           <% end %>
-        </p>
-        <p class="vertical-middle">
-          更新日：<%= @post.created_at.strftime('%Y年%-m月%-d日') %>
-        </p>
-      </div>
-    </div>
-  </div>
-  <%= attachment_image_tag @post, :image, width: "100%", height:"auto", format: "jpeg", fallback: "no_image.jpg" %>
-  <div class="card-body">
-    <p class="card-text"><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
-    <% if @post.tags != nil %>
-      <% @post_tags.each do |tag| %>
-          <p class="card-text tag">
-            <i class="fas fa-hashtag"></i>
-            <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id), class: "tag_link" %>
-          </p>
-      <% end %>
-    <% end %>
-
-    <p class="card-text">
-      <i class="fas fa-map-marker-alt"></i>
-      <%= @post.prefecture_name %>
-    </p>
-
-    <p class="card-text">
-      <i class="fas fa-map-marked-alt"></i>
-      <%= @post.spot.address %>
-      <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
-    </p>
-
-    <div id="likes_buttons_<%= @post.id %>">
-      <%= render 'likes/like', post: @post %>
-    </div>
-
-    <hr class="border-dark">
-
-    <div id="comments_count_<%= @post.id %>">
-      <%= render 'comments/count', post: @post %>
-    </div>
-
-
-    <div id="comments_area_<%= @post.id %>">
-      <%= render 'comments/index', post: @post %>
-    </div>
-
-    <div class="comment-create">
-      <%= form_with model: [@post, @comment] do |f| %>
-        <div class="form-group">
-          <%= f.text_area :content, placeholder: "コメントを追加...", class: "form-control" %>
+<div class="container">
+  <div class="row">
+    <div class="card col-md-8 mx-auto">
+      <div class="card-body">
+        <h1 class="card-title font-weight-bold"><%= @post.title %></h1>
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="vertical-middle">
+              <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image_user.jpeg", class: "rounded-circle", size: "50x50" %>
+            </p>
+            <p class="vertical-middle">
+              <%= link_to user_path(@post.user), class: "show-link" do %>
+                <%= @post.user.name %>
+               <% end %>
+            </p>
+            <p class="vertical-middle">
+              更新日：<%= @post.created_at.strftime('%Y年%-m月%-d日') %>
+            </p>
+          </div>
         </div>
-        <div class="actions">
-          <%= f.button :type => "submit", class: "btn btn-outline-dark btn-lg btn-block" do %>
-            <i class="fas fa-comments"> コメントを投稿する</i>
+      </div>
+      <%= attachment_image_tag @post, :image, width: "100%", height:"auto", format: "jpeg", fallback: "no_image.jpg" %>
+      <div class="card-body">
+        <p class="card-text"><%= safe_join(@post.caption.split("\n"),tag(:br)) %></p>
+        <% if @post.tags != nil %>
+          <% @post_tags.each do |tag| %>
+              <p class="card-text tag">
+                <i class="fas fa-hashtag"></i>
+                <%= link_to tag.tag_name, tag_posts_path(tag_id: tag.id), class: "tag_link" %>
+              </p>
+          <% end %>
+        <% end %>
+
+        <p class="card-text">
+          <i class="fas fa-map-marker-alt"></i>
+          <%= @post.prefecture_name %>
+        </p>
+
+        <p class="card-text">
+          <i class="fas fa-map-marked-alt"></i>
+          <%= @post.spot.address %>
+          <div class="show_maps" id="show_map" style="height: 320px; width: 100%;"></div>
+        </p>
+
+        <div id="likes_buttons_<%= @post.id %>">
+          <%= render 'likes/like', post: @post %>
+        </div>
+
+        <hr class="border-dark">
+
+        <div id="comments_count_<%= @post.id %>">
+          <%= render 'comments/count', post: @post %>
+        </div>
+
+
+        <div id="comments_area_<%= @post.id %>">
+          <%= render 'comments/index', post: @post %>
+        </div>
+
+        <div class="comment-create">
+          <%= form_with model: [@post, @comment] do |f| %>
+            <div class="form-group">
+              <%= f.text_area :content, placeholder: "コメントを追加...", class: "form-control" %>
+            </div>
+            <div class="actions">
+              <%= f.button :type => "submit", class: "btn btn-outline-dark btn-lg btn-block" do %>
+                <i class="fas fa-comments"> コメントを投稿する</i>
+              <% end %>
+            </div>
           <% end %>
         </div>
-      <% end %>
-    </div>
 
-    <% if @post.user == current_user %>
-      <hr class="border-dark">
-      <div data-turbolinks="false">
-        <%= link_to " 編集する", edit_post_path(@post), class: "btn btn-success btn-lg btn-block fas fa-edit" %>
+        <% if @post.user == current_user %>
+          <hr class="border-dark">
+          <div data-turbolinks="false">
+            <%= link_to " 編集する", edit_post_path(@post), class: "btn btn-success btn-lg btn-block fas fa-edit" %>
+          </div>
+          <hr class="border-dark">
+          <div>
+            <%= link_to " 削除する", post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-danger btn-lg btn-block fas fa-trash-alt" %>
+          </div>
+        <% end %>
       </div>
-      <hr class="border-dark">
-      <div>
-        <%= link_to " 削除する", post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-danger btn-lg btn-block fas fa-trash-alt" %>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>

@@ -1,8 +1,6 @@
 # :handbag:じもたび:handbag:
 
-<img width="1440" alt="ji_top_pic" src="https://user-images.githubusercontent.com/78731929/125216374-fc719100-e2f8-11eb-87d6-e6aa5e2c45a8.png">
-
-![jt_demo](https://user-images.githubusercontent.com/78731929/123581063-13eb4d00-d816-11eb-9cc0-064954ff0144.gif)
+<img width="1439" alt="top_screen" src="https://user-images.githubusercontent.com/78731929/125794926-17cb8c55-ee20-45d6-8385-1e8bc19d7daa.png">
 
 ## :black_nib:サイト概要
 絶景スポットや知られざる穴場スポット、おすすめのご当地料理や名産品、伝統文化や工芸品など  
@@ -69,8 +67,10 @@
 - IDE：Cloud9
 
 ## :open_file_folder:使用素材
-* [フリー素材ブログ](https://www.shoshinsha-design.com/) 
+* [フリー素材ブログ](https://www.shoshinsha-design.com/)
 
-* [ぱくたそ](https://www.pakutaso.com/)  
+* [ぱくたそ](https://www.pakutaso.com/)
 
 * [photoAC](https://www.photo-ac.com/)
+
+* [illustAC](https://www.ac-illust.com/)
