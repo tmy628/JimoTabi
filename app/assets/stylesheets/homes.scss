@@ -34,7 +34,7 @@
 }
 
 .about {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: image-url("about_image.jpg");
   background-size: cover;
@@ -42,7 +42,7 @@
 }
 
 .about-visual {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: rgba( 0, 0, 0, 0.6);
   display: flex;
@@ -51,8 +51,8 @@
 }
 
 .about_content {
-  padding: 0 30px;
   text-align: center;
+  margin: 0 30px;
 }
 
 .about-head {
@@ -63,7 +63,6 @@
 }
 
 .about-body {
-  font-size: 20px;
   font-weight: bold;
   color: #fff;
   line-height: 3;
@@ -88,7 +87,6 @@
   }
 
   .about-body {
-    margin-top: 25px;
     line-height: 2;
     text-align: left;
   }
@@ -114,9 +112,7 @@
   }
 
   .about-body {
-    margin-top: 20px;
     line-height: 2;
-    font-size: 17px;
     text-align: left;
   }
 }
