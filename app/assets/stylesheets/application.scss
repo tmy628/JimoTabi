@@ -29,6 +29,22 @@
 
  body {
    font-family: 'Sawarabi Mincho', sans-serif;
+   min-height: 100vh;
+   position: relative; /* 相対位置 */
+   padding-bottom: 50px;/*←footerの高さ*/
+   box-sizing: border-box; /* 全て含めてmin-height:100vhに */
+ }
+
+  footer {
+   width: 100%;
+   background-color: #eeeeee;
+   border-top: 1px solid;
+   border-color: #dcdcdc;
+   color: #999999;
+   text-align: center;
+   padding-top: 1rem;
+   position: absolute; /* 絶対位置 */
+   bottom: 0; /* 下に固定 */
  }
 
  .container {
@@ -146,16 +162,7 @@
    display: inline-block;
  }
 
- .footer {
-   background-color: #eeeeee;
- }
-
- .copyright {
-   margin-top: 1rem;
-   color: #999999;
- }
-
-.more {
+ .more {
    color: #000;
  }
 
