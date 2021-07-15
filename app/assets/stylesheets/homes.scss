@@ -2,13 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// html {
-//   scroll-behavior: smooth;
-
-// }
-
 .top {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: image-url("top_image.jpg");
   background-size: cover;
@@ -16,7 +11,7 @@
 }
 
 .top-visual {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: rgba( 0, 0, 0, 0.4);
   display: flex;
@@ -35,7 +30,6 @@
 
 .top-theme {
   font-size: 40px;
-  margin: 0;
   color: #fff;
 }
 
@@ -61,15 +55,11 @@
   text-align: center;
 }
 
-// .head{
-//
-// }
-
 .about-head {
   font-size: 40px;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(transparent 50%, #ff9999 0%); // ラインマーカー
+  background: linear-gradient(transparent 75%, #ffadad 75%); // ラインマーカー
 }
 
 .about-body {

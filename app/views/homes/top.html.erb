@@ -10,15 +10,15 @@
             <p class="top-theme">
               〜地元を旅して、魅力を再発見！〜
             </p>
-            <div>
-              <%= link_to ' 新規登録', new_user_registration_path, class: "fas fa-user-plus btn btn-success my-5" %>
-            </div>
-            <div>
+            <p>
+              <%= link_to ' 新規登録', new_user_registration_path, class: "fas fa-user-plus btn btn-success" %>
+            </p>
+            <p>
               <%= link_to ' ログイン', new_user_session_path, class: "fas fa-sign-in-alt btn btn-primary" %>
-            </div>
-            <div>
-              <%= link_to ' ゲストログイン', users_guest_sign_in_path, method: :post, class: "btn btn-light fas fa-sign-in-alt mt-5" %>
-            </div>
+            </p>
+            <p>
+              <%= link_to ' ゲストログイン', users_guest_sign_in_path, method: :post, class: "fas fa-sign-in-alt btn btn-light" %>
+            </p>
           </div>
         </div>
       </div>
