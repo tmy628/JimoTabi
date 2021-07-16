@@ -6,7 +6,7 @@
         <div class="row">
           <div class="col-sm-12">
             <p class="vertical-middle">
-              <%= attachment_image_tag @post.user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_image_user.jpeg", class: "rounded-circle", size: "50x50" %>
+              <%= attachment_image_tag @post.user, :profile_image, fallback: "no_image_user.jpg", class: "rounded-circle", size: "50x50" %>
             </p>
             <p class="vertical-middle">
               <%= link_to user_path(@post.user), class: "show-link" do %>
