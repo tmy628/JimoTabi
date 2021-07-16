@@ -3,7 +3,7 @@
     <div class="row no-gutters">
       <div data-turbolinks="false", class="col-md-4 my-auto">
         <%= link_to post_path(post.id) do %>
-          <%= attachment_image_tag post, :image, width: "100%", height:"auto", format: "jpeg", fallback: "no_image.jpg", class: "img" %>
+          <%= attachment_image_tag post, :image, width: "100%", height: "auto", fallback: "no_image.jpg", class: "img" %>
         <% end %>
       </div>
       <div class="col-md-8 my-auto">
