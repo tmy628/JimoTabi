@@ -19,7 +19,7 @@ class Post < ApplicationRecord
   validates :prefecture_name, presence: {
     message: -> (rec, data) {
       I18n.t('activerecord.errors.models.post.validates')
-    }
+    },
   }
 
   def liked_by?(user)
