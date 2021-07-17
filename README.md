@@ -32,6 +32,20 @@
 
 * [ER図](https://drive.google.com/file/d/1tZh4HRx65gmpRIa9W8cx6RMiD9tL5HVu/view?usp=sharing)
 
+## :books:使用技術
+* Ruby 2.6.3
+* Ruby on Rails 5.2.5
+* MySQL 5.7.22
+* Nginx
+* Puma
+* AWS
+  * EC2
+  * RDS
+  * Route53
+* RSpec
+* 外部API
+  * Google Maps API
+
 ## :clipboard:機能一覧
 * ユーザー認証（devise）
   * 日本語化
