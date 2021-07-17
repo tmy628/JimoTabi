@@ -5,9 +5,9 @@ inherit_from:
 AsciiComments:
   Enabled: false
 
-# 行の文字数の上限を120に設定
+# 行の文字数の上限を130に設定
 LineLength:
-  Max: 120
+  Max: 130
 
 # rubocopでコード解析したくないファイルやフォルダを指定
 AllCops:
