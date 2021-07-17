@@ -42,6 +42,7 @@
   * EC2
   * RDS
   * Route53
+* Certbot
 * RSpec
 * 外部API
   * Google Maps API
